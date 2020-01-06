@@ -22,12 +22,15 @@ keypoints:
 
 ## The Essence of Version Control
 
-- A system for managing your work (not necessarily just code) which **records snapshots** of the current state of a set of files
+- A system for managing your work (not necessarily just code) which **records
+  snapshots** of the current state of a set of files
 - Provides a historical record for your project
 - Reports "diffs" that describe the file changes between snapshots
 - Implements **branching**:
-  - Allows working on several different features at the same time and switching between them whilst also maintaining a working copy of the code
-  - Different people can work on the same code/project without interfering with each other
+  - Allows working on several different features at the same time and switching
+    between them whilst also maintaining a working copy of the code
+  - Different people can work on the same code/project without interfering with
+    each other
   - You can experiment with an idea and discard it if it turns out to be bad
 - Implements **merging**:
   - The opposite of branching
@@ -35,7 +38,7 @@ keypoints:
 
 ---
 
-## Why Code Can Become a Disaster Without Version Control
+## What Can Go Wrong Without Version Control
 
 Consider the following directory listing. This is a common situation that can
 occur when working without version control (in fact it's probably the best
@@ -70,12 +73,13 @@ The trouble with this way of working:
 * Not clear which versions of mylib and somecode are compatible
 * Difficult to find changes between versions
 
-### Roll-back functionality
+### Mistakes Happen
 
-* Mistakes happen - without recorded snapshots you cannot easily undo mistakes
-  and go back to a working version. You might not even be able tell what your
-  mistake was.
-
+Without recorded snapshots you cannot:
+* Undo mistakes and go back to a working version of your code
+* Find out when a mistake was made and which results it may affect
+* You might not even be able to tell what your mistake was (*"It was working
+  yesterday..."*)
 
 ### Working on different things
 
@@ -84,14 +88,13 @@ The trouble with this way of working:
 * Usually leads to multiple different copies of the code
 * Copies need to be combined back together - but this often doesn't happen
 
-
 ### Collaboration
 
-* *"I will just finish my work and then you can start with your changes."*.
-* *"Can you please send me the latest version?"*.
-* *"Where is the latest version?"*.
-* *"Which version are you using?"*.
-* *"Which version have the authors used in the paper I am trying to reproduce?"*.
+* *"I will just finish my work and then you can start with your changes."*
+* *"Can you please send me the latest version?"*
+* *"Where is the latest version?"*
+* *"Which version are you using?"*
+* *"Which version have the authors used in the paper I am trying to reproduce?"*
 
 
 ### Reproducibility
@@ -102,8 +105,9 @@ The trouble with this way of working:
   of your code?).
 
 
-### What about Dropbox or Google Drive?
+## What about Dropbox or Google Drive?
 
+Using a system like this solves some but not all of the issues above:
 * Document/code is in one place, no need to email snapshots.
 * How can you use an old version? Possible to get old versions but in a much
   less useful way - snapshots of files, not directories.
@@ -121,9 +125,8 @@ important fundamental concepts.
 
 These materials are written in the style of [The Carpentries][carpentries]. If
 attending an instance of this workshop you are fully encouraged to "type along"
-with instructor to get the most out of it.
+with the instructor in order to be able to complete the exercises.
 
 [carpentries]: https://carpentries.org/
 
 {% include links.md %}
-
