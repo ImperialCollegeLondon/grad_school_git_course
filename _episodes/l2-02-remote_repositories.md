@@ -14,7 +14,7 @@ objectives:
 - "Find out the available remote branches."
 - "Setup a local branch to track a new remote one."
 keypoints:
-- "origin is typically the name of the remote repository."
+- "origin is typically the name of the remote repository used by git."
 - "Local and remote repositories are not identical, in general."
 - "Local and remote repositories are not synchronized automatically."
 - "push and pull commands only affect the branch currently checked out."
