@@ -132,4 +132,37 @@ Depending on whether you are starting from a remote repository and want to get
 > {: .solution}
 {: .challenge}
 
+## Pulling
+
+- Opposite to `push`, `pull` brings changes in the upstream branch to the local
+ branch.
+- You can check if there are any changes to synchronize in the upstream
+ branch by running `git fetch`, which only checks if there are changes, and then
+  `git status` to see how your local and remote branch compare in terms of
+   commit history.
+- If the local and upstream branches have diverged - have different
+ commit history -, the command will attempt to merge both, dealing with
+  conflicts as discussed in Lesson 1.
+- You can get a new branch existing only in `origin` directly with `git
+ checkout [branch_name]` without the need of creating the branch locally and
+  then pulling the remote. 
+
+> ## Pulling an updated README
+> When reviewing your new README file online, you have discover a typo and
+> decided to correct it directly in GitHub. Modify the README file online and
+> then synchronise the changes with your local repository.
+>
+> > ## Solution
+> > ```bash
+> > $ git fetch
+> > $ git status
+> > ```
+> > This will indicate that the remote branch is ahead of your local branch
+> by 1 commit. Since there are no diverging commits, it is safe to pull. 
+> > ```bash
+> > $ git pull
+> > ```
+> {: .solution}
+{: .challenge}
+  
 {% include links.md %}
