@@ -31,7 +31,7 @@ keypoints:
  were just directories in your hard drive using git for version control.
 - Local and remote repositories can be synchronized, so changes are
  accessible by other contributors.
-- **This sysnchronization is not automatic**: it has to be done explicitly
+- **This synchronisation is not automatic**: it has to be done explicitly
  for each branch you want to keep up to date (see **pull** and **push** below
  ).
 - The default name for a remote repository synchronised with a local one is
