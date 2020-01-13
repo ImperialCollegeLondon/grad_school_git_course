@@ -141,7 +141,7 @@ Depending on whether you are starting from a remote repository and want to get
   `git status` to see how your local and remote branch compare in terms of
    commit history.
 - If the local and upstream branches have diverged - have different
- commit history -, the command will attempt to merge both, dealing with
+ commit history - the command will attempt to merge both, dealing with
   conflicts as discussed in Lesson 1.
 - You can get a new branch existing only in `origin` directly with `git
  checkout [branch_name]` without the need of creating the branch locally and
