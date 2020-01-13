@@ -41,7 +41,7 @@ keypoints:
 
 - A local branch synchronised with a remote one is said to be **tracking**
 that remote branch.
-- The remote branch being tracked is called the **upstream branch**
+- The remote branch being tracked is called the **upstream branch**.
 
 ## Configuring repositories
 
