@@ -119,11 +119,11 @@ This is a very useful command that we will use a lot. It should be your first
 point of call to figure out the current state of a repository and often suggests
 commands that can be used for different tasks.
 
-Don't worry about all the output for now, the important bit is that the the 2
-files we already have are untracked in the repository (directory). You want to
-**add the files** to the list of files tracked by Git. Git does not track any
-files automatically and you need make a conscious decision to add a file. Let's
-do what Git hints at:
+Don't worry about all the output for now, the important bit is that the 2 files
+we already have are untracked in the repository (directory). We want to **add
+the files** to the list of files tracked by Git. Git does not track any files
+automatically and you need make a conscious decision to add a file. Let's do
+what Git hints at:
 
 ~~~
 $ git add ingredients.txt
@@ -145,7 +145,7 @@ Changes to be committed:
 ~~~
 {: .output}
 
-Now this change is *staged* and ready to be committed.
+Now this change is ***staged*** and ready to be committed.
 
 Let us now commit the change to the repository:
 
@@ -160,9 +160,10 @@ $ git commit -m "adding ingredients and instructions"
 {: .commands}
 
 We have now finished creating the first snapshot in the repository. Named after
-the command we just used a snapshot is usually referred to in Git as a commit,
-or sometimes a changeset. We will use the term commit from now on. Straight away
-we query the status to get this useful command into our muscle memory:
+the command we just used, a snapshot is usually referred to in Git as a
+**commit**, or sometimes a **changeset**. We will use the term commit from now
+on. Straight away query the status to get this useful command into our muscle
+memory:
 
 ~~~
 $ git status
@@ -174,7 +175,7 @@ nothing to commit, working tree clean
 ~~~
 {: .output}
 
-The output we get know is very minimal. This highlights an important point about
+The output we get now is very minimal. This highlights an important point about
 the status command - it's purpose is to report on changes in the repository
 **relative to the last commit**. In order to see the commits made in a project
 we can use:
@@ -198,24 +199,29 @@ the message you specified.
 
 ## Staging and Committing
 
-For our first commit we saw that this is a two step process first - we use `git
+For our first commit we saw that this is a two step process - first we use `git
 add` then `git commit`. This is an important pattern used by Git. To understand
 this in more detail it's useful to know that git has three 'areas'.
 
 * The Working Directory (or Working Tree)
   * This is the copy of the files that you actually work with in a normal way.
-* The Staging Area
+* The Staging Area (or index)
   * When you run `git add` a copy of a file is taken from the working tree and
     placed here.
   * New (untracked) files must be added to the staging area before git will
     track them.
   * If a tracked file has been changed it must be added to staging area for that
     change to be included in a commit.
-  * This is know as **staging files** or **adding them to the staging area**.
+  * This is known as **staging files** or **adding them to the staging area**.
   * Only files in the staging area are included in a commit.
-* The Index
-  * When you run `git commit` a new commit is created in the index.
-  * All files in the staging area are moved to the index as part of the new commit.
+* The Repository
+  * When you run `git commit` a new commit is created in the repository.
+  * All files in the staging area are moved to the repository as part of the new commit.
+
+The relationship between the commands we've seen so far and the different areas
+of Git are show below:
+![Linear]({{ site.baseurl }}/fig/git_areas.png "Relationship between the
+different git areas and the commands seen so far"){:class="img-responsive"}
 
 > ## Exercise: Create some more commits
 >
@@ -232,13 +238,13 @@ this in more detail it's useful to know that git has three 'areas'.
 > --color`.
 >
 > First, practice what we have just seen by **staging and committing** the
-> changes to `ingredients.txt`. Remembering to include an informative commit
+> changes to `ingredients.txt`. Remember to include an informative commit
 > message.
 >
-> Now, **run** `git status` and `git diff`. Then, **stage and commit** the
-> changes to `instructions.txt` but, after each step run `git status`, `git
-> diff` and `git diff --cached`. What is the difference between the two diff
-> commands? How does running staging and committing change the status of a file?
+> Now, run `git status` and `git diff`. Then, **stage and commit** the changes
+> to `instructions.txt` but, after each step run `git status`, `git diff` and
+> `git diff --cached`. What is the difference between the two diff commands? How
+> does running staging and committing change the status of a file?
 >
 {: .challenge}
 
@@ -279,10 +285,10 @@ but in the alphanumeric sequence (hash) at the start of each commit.
 * We can browse the development and access each state that we have committed.
 * The long hashes following the word commit are random and uniquely label a
   state of the code.
-* Output is in reverse chronological order, i.e. newest commits on top.
-* We will use them when comparing versions and when going back in time.
+* Hashes are used when comparing versions and going back in time.
 * If the first characters of the hash are unique it is not necessary to type the
   entire hash.
+* Output is in reverse chronological order, i.e. newest commits on top.
 * Notice the label HEAD at the top, this indicates the indicates the commit that
   the current working directory is based on.
 
@@ -298,9 +304,9 @@ but in the alphanumeric sequence (hash) at the start of each commit.
 
 ### Rewriting History
 
-A very common and frustrating occurrence when using Git making a commit and then
-realising you forgot to stage something, or staged something you shouldn't
-have. Fortunately Git history is not set in stone and can be changed.
+A very common and frustrating occurrence when using Git is making a commit and
+then realising you forgot to stage something, or staged something you shouldn't
+have. Fortunately the Git commit history is not set in stone and can be changed.
 
 To undo a commit you can use:
 ~~~
@@ -352,10 +358,10 @@ $ git commit -m "Added 1/2 onion to ingredients"
 ~~~
 {: .commands}
 
-> #### Changing History Might Have Unexpected Consequences
+> ## Changing History Can Have Unexpected Consequences
 >
-> Using `git reset` to remove a commit is only a good idea if you have not
-> shared it yet with other people. If you make a commit and share it on GitHub
+> Using `git reset` to remove a commit is only a good idea if you have **not
+> shared** it yet with other people. If you make a commit and share it on GitHub
 > or with a colleague by other means then removing that commit from your Git
 > history will cause inconsistencies that may be difficult to resolve later. We
 > only recommend this approach for commits that are only in your local working
@@ -407,5 +413,16 @@ This is a good example of why making seperate commits for each change is a good
 idea. If we had committed the changes to both `ingredients.txt` and
 `instructions.txt` at once we would not have been able to revert just the enjoy
 instruction.
+
+> ## The Ultimate Guide to Undoing in Git
+>
+> It can be quite easy to get into a messy state in Git and it can be difficult
+> to get help via a search engine that covers your exact situation. If you need
+> help we recommend consulting ["On undoing, fixing, or removing commits in
+> git"](https://sethrobertson.github.io/GitFixUm/fixup.html). This page contains
+> a very comprehensive and readable guide to getting out of a sticky situation
+> with Git.
+>
+{: .callout}
 
 {% include links.md %}
