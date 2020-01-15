@@ -76,8 +76,8 @@ project. In Git terminology a project is called a repository (frequently
 shortened to repo). 
 
 For this workshop you were provided with a zip file containing a directory
-called `recipe` which in turn contains 2 files - `instructions.txt` and
-`ingredients.txt`. This is the project we'll be working with, whilst not based
+called `recipe` which in turn contains 2 files - `instructions.md` and
+`ingredients.md`. This is the project we'll be working with, whilst not based
 on code this recipe for guacamole is an intuitive example to illustrate the
 functionality of Git.
 
@@ -109,8 +109,8 @@ No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	ingredients.txt
-	instructions.txt
+	ingredients.md
+	instructions.md
 
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
@@ -126,8 +126,8 @@ automatically and you need make a conscious decision to add a file. Let's do
 what Git hints at:
 
 ~~~
-$ git add ingredients.txt
-$ git add instructions.txt
+$ git add ingredients.md
+$ git add instructions.md
 $ git status
 ~~~
 {: .commands}
@@ -140,8 +140,8 @@ Initial commit
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   ingredients.txt
-	new file:   instructions.txt
+	new file:   ingredients.md
+	new file:   instructions.md
 ~~~
 {: .output}
 
@@ -154,8 +154,8 @@ $ git commit -m "adding ingredients and instructions"
 
 [master (root-commit) aa243ea] adding ingredients and instructions
  2 files changed, 8 insertions(+)
- create mode 100644 ingredients.txt
- create mode 100644 instructions.txt
+ create mode 100644 ingredients.md
+ create mode 100644 instructions.md
 ~~~
 {: .commands}
 
@@ -225,8 +225,8 @@ different git areas and the commands seen so far"){:class="img-responsive"}
 
 > ## Exercise: Create some more commits
 >
-> Add "1/2 onion" to `ingredients.txt` and also the instruction "enjoy!" to
-> `instructions.txt`. Do not stage the changes yet.
+> Add "1/2 onion" to `ingredients.md` and also the instruction "enjoy!" to
+> `instructions.md`. Do not stage the changes yet.
 >
 > When you are done editing the files, try:
 >
@@ -238,11 +238,11 @@ different git areas and the commands seen so far"){:class="img-responsive"}
 > --color`.
 >
 > First, practice what we have just seen by **staging and committing** the
-> changes to `ingredients.txt`. Remember to include an informative commit
+> changes to `ingredients.md`. Remember to include an informative commit
 > message.
 >
 > Now, run `git status` and `git diff`. Then, **stage and commit** the changes
-> to `instructions.txt` but, after each step run `git status`, `git diff` and
+> to `instructions.md` but, after each step run `git status`, `git diff` and
 > `git diff --cached`. What is the difference between the two diff commands? How
 > does running staging and committing change the status of a file?
 >
@@ -343,7 +343,7 @@ $ git status
 On branch master
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   ingredients.txt
+	modified:   ingredients.md
 
 ~~~
 {: .output}
@@ -351,7 +351,7 @@ This shows that the content which was part of the commit has been moved back
 into the staging area.
 
 From here we can choose what to do. We could stage some additional changes and
-create a new commit, or we could unstage ingredients.txt and do something else
+create a new commit, or we could unstage ingredients.md and do something else
 entirely. For now lets just restore the commit we removed by committing again:
 ~~~
 $ git commit -m "Added 1/2 onion to ingredients"
@@ -385,7 +385,7 @@ $ git revert --no-edit COMMIT_HASH
 ~~~
 {: .output}
 
-Check the contents of `instructions.txt` and you should see that the enjoy
+Check the contents of `instructions.md` and you should see that the enjoy
 instruction is gone. To fully understand what revert is doing check out the
 repository history:
 
@@ -410,8 +410,8 @@ Using `git revert` has added a new commit which reverses the changes made in the
 specified commit.
 
 This is a good example of why making seperate commits for each change is a good
-idea. If we had committed the changes to both `ingredients.txt` and
-`instructions.txt` at once we would not have been able to revert just the enjoy
+idea. If we had committed the changes to both `ingredients.md` and
+`instructions.md` at once we would not have been able to revert just the enjoy
 instruction.
 
 > ## The Ultimate Guide to Undoing in Git
