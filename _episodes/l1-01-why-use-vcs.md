@@ -123,6 +123,12 @@ become established as by far the most widely used. We focus on use of Git via
 its command line interface as we believe this is the best way to communicate the
 important fundamental concepts.
 
+Git is a very powerful tool. Unfortunately it is also quite difficult start
+using. Git often uses confusing and unintuitive terminology and benefits of its
+use are often only apparent in the longer term. Today we will make every effort
+to demystify Git and make clear why it's usage is an essential part of any
+programming activity.
+
 These materials are written in the style of [The Carpentries][carpentries]. If
 attending an instance of this workshop you are fully encouraged to "type along"
 with the instructor in order to be able to complete the exercises.
