@@ -130,7 +130,7 @@ diagrammatically:
 "Repository before branching"){:class="img-responsive"}
 
 Let's create a branch called `experiment` where we try out adding some
-coriander to `ingredients.txt`.
+coriander to `ingredients.md`.
 
 ~~~
 $ git branch experiment
@@ -175,7 +175,7 @@ with `git branch`.
 "Repository with HEAD at new experiment branch"){:class="img-responsive"}
 
 Now when we make new commits they will be part of the `experiment` branch. To
-test this let's add 2 tbsp coriander **at the top** of `ingredients.txt`:
+test this let's add 2 tbsp coriander **at the top** of `ingredients.md`:
 
 ```shell
 * 2 tbsp coriander
@@ -211,7 +211,7 @@ been created as part of the experiment branch.
 
 As mentioned previously, one of the advantages of using branches is working on
 different features in parallel. You may have already spotted the typo in
-`ingredients.txt` but let's say that we've only just seen it in the midst of
+`ingredients.md` but let's say that we've only just seen it in the midst of
 our work on the `experiment` branch. We could correct the typo with a new commit
 in `experiment` but it doesn't fit in very well here - if we decide to discard
 our experiment then we also lose the correction. Instead it makes much more
@@ -219,14 +219,14 @@ sense to create a correcting commit in `master`:
 
 ~~~
 $ git checkout master
-$ # make change to ingredients.txt
-$ git add instructions.txt
-$ git commit -m "Corrected typo in ingredients.txt"
+$ # make change to ingredients.md
+$ git add instructions.md
+$ git commit -m "Corrected typo in ingredients.md"
 $ git graph
 ~~~
 {: .commands}
 ~~~
-* d4ca89f (HEAD -> master) Corrected typo in ingredients.txt
+* d4ca89f (HEAD -> master) Corrected typo in ingredients.md
 | * 96fe069 (experiment) try with some coriander
 |/  
 * ddef60e Revert "Added instruction to enjoy"
@@ -249,7 +249,7 @@ $ git merge --no-edit experiment
 {: .commands}
 ~~~
 Merge made by the 'recursive' strategy.
- ingredients.txt | 1 +
+ ingredients.md | 1 +
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
@@ -263,7 +263,7 @@ $ git graph
 *   40070a5 (HEAD -> master) Merge branch 'experiment'
 |\
 | * 96fe069 (experiment) try with some coriander
-* | d4ca89f Corrected typo in ingredients.txt
+* | d4ca89f Corrected typo in ingredients.md
 |/
 * ddef60e Revert "Added instruction to enjoy"
 * 8bfd0ff Added 1/2 onion to ingredients
@@ -296,8 +296,8 @@ repository.
 > >
 > > ~~~
 > > $ git checkout experiment
-> > $ # make changes to ingredients.txt
-> > $ git add ingredients.txt
+> > $ # make changes to ingredients.md
+> > $ git add ingredients.md
 > > $ git commit -m "Reduced the amount of coriander"
 > > $ git checkout master
 > > $ git merge --no-edit experiment
@@ -312,7 +312,7 @@ repository.
 > > |\ \
 > > | |/
 > > | * 96fe069 try with some coriander
-> > * | d4ca89f Corrected typo in ingredients.txt
+> > * | d4ca89f Corrected typo in ingredients.md
 > > |/
 > > * ddef60e Revert "Added instruction to enjoy"
 > > * 8bfd0ff Added 1/2 onion to ingredients
@@ -331,12 +331,12 @@ you to decide what should be kept and what should be discarded. First lets set
 up a conflict:
 ~~~
 $ git checkout master
-$ # change line to 1 tsp salt in ingredients.txt
-$ git add ingredients.txt
+$ # change line to 1 tsp salt in ingredients.md
+$ git add ingredients.md
 $ git commit -m "Reduce salt"
 $ git checkout experiment
-$ # change line to 3 tsp in ingredients.txt
-$ git add ingredients.txt
+$ # change line to 3 tsp in ingredients.md
+$ git add ingredients.md
 $ git commit -m "Added salt to balance coriander"
 $ git graph
 ~~~
@@ -354,7 +354,7 @@ $ git graph
 | |/  
 |/|   
 * | 96fe069 try with some coriander
-| * d4ca89f Corrected typo in ingredients.txt
+| * d4ca89f Corrected typo in ingredients.md
 |/  
 * ddef60e Revert "Added instruction to enjoy"
 * 8bfd0ff Added 1/2 onion to ingredients
@@ -373,8 +373,8 @@ $ git merge --no-edit experiment
 ~~~
 {: .commands}
 ~~~
-Auto-merging ingredients.txt
-CONFLICT (content): Merge conflict in ingredients.txt
+Auto-merging ingredients.md
+CONFLICT (content): Merge conflict in ingredients.md
 Automatic merge failed; fix conflicts and then commit the result.
 ~~~
 {: .output}
@@ -394,7 +394,7 @@ You have unmerged paths.
 
 Unmerged paths:
   (use "git add <file>..." to mark resolution)
-	both modified:   ingredients.txt
+	both modified:   ingredients.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
@@ -406,7 +406,7 @@ the conflict at some point though so may as well do it now. Fortunately we don't
 need any new commands. We just need to edit the conflicted file into the state
 we would like to keep, then add and commit as usual.
 
-Let's look at ingredients.txt to understand the conflict:
+Let's look at ingredients.md to understand the conflict:
 ~~~
 * 1 tbsp coriander
 * 2 avocados
@@ -428,7 +428,7 @@ to choose between the two versions presented. The tags `<<<<<<< HEAD` and
 
 The conflict makes sense, we can either have 1 tsp of salt or 3. There is no way
 for Git to know which it should be so it has to ask you. Let's resolve it by
-choosing the version from the master branch. Edit `ingredients.txt` so it looks
+choosing the version from the master branch. Edit `ingredients.md` so it looks
 like:
 ~~~
 * 1 tbsp coriander
@@ -440,7 +440,7 @@ like:
 
 now stage, commit and check the result:
 ~~~
-$ git add ingredients.txt
+$ git add ingredients.md
 $ git commit -m "Merged experiment into master"
 $ git graph
 ~~~
@@ -458,7 +458,7 @@ $ git graph
 |\ \  
 | |/  
 | * 96fe069 try with some coriander
-* | d4ca89f Corrected typo in ingredients.txt
+* | d4ca89f Corrected typo in ingredients.md
 |/  
 * ddef60e Revert "Added instruction to enjoy"
 * 8bfd0ff Added 1/2 onion to ingredients
