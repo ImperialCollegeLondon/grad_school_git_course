@@ -67,8 +67,13 @@ of commit history wit multiple branches and merges"){:class="img-responsive"}
 * Main line development is often called `master`.
 * Other than this convention there is nothing special about `master`, it is just
   a branch.
-* Commits form a directed acyclic graph (we have left out the arrows to avoid
-  confusion about the time arrow).
+* Commits form a directed acyclic graph (arrows point from parent commits to
+  child commits).
+* Commits are **relative** to the preceding (parent) commit. Whilst we
+  previously talked about Git taking "snapshots" of your project this is
+  slightly misleading. Git actually records *the changes made since the last
+  commit*. The difference is subtle but powerful, it makes commands like `git
+  revert` possible.
 
 A group of commits that create a single narrative are called a **branch**.
 There are different branching strategies, but it is useful to think that a
