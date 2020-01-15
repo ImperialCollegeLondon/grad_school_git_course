@@ -79,7 +79,9 @@ For this workshop you were provided with a zip file containing a directory
 called `recipe` which in turn contains 2 files - `instructions.md` and
 `ingredients.md`. This is the project we'll be working with, whilst not based
 on code this recipe for guacamole is an intuitive example to illustrate the
-functionality of Git.
+functionality of Git. Files with a `.md` extension are using a format called
+Markdown, don't worry about this now, for our immediate purposes these are just
+text files. Use of Markdown and Github will come up in the next session however.
 
 To start using Git with our recipe we need to create a repository for it. Make
 sure the current working directory for your terminal is `recipe` and run:
