@@ -70,6 +70,7 @@ Depending on whether you are starting from a remote repository and want to get
 > on the repository using the commands already discussed in Lesson 1, like
 > `git log` or `git branch -vv`, which should show that there is indeed just one
 > branch, `master` tracking `origin/master`)
+> ![Git collaborative]({{ site.baseurl }}/fig/clone.png "Effect of clonning a remote repository."){:class="img-responsive"}
 {: .challenge}
 
 > ## Configuring a remote repository from a local one
@@ -105,16 +106,20 @@ Depending on whether you are starting from a remote repository and want to get
 
 - Its basic use is to synchronize **any committed changes** in your current
  branch to its upstream branch: `$ git push`.
-- Changes in the staging area will not be synchronized. 
+- Changes in the staging area will not be synchronized.
+![Git collaborative]({{ site.baseurl }}/fig/push.png "Push a branch
+."){:class="img-responsive"}
 - If the current branch has no upstream yet, you can configure one by doing 
 `$ git push -u origin [branch_name]`, as done with `master` in the exercise
  above.
+![Git collaborative]({{ site.baseurl }}/fig/push_u.png "Push a branch without
+ upstream yet."){:class="img-responsive"}
 - `push` only operates on your current branch. If you want to push another
  branch, you have to `checkout` that branch first.
 - If the upstream branch has changes you do not have in the local branch, the
  command will fail, requesting you to merge those changes first. We will
   discuss this into more detail in the next episode.
-  
+
 > ## Pushing an updated README
 > You want to update the README file of the repository of Episode 1 with more
 > detailed information of what the repository is about and then push the
@@ -146,6 +151,9 @@ Depending on whether you are starting from a remote repository and want to get
 - You can get a new branch existing only in `origin` directly with `git
  checkout [branch_name]` without the need of creating the branch locally and
   then pulling the remote. 
+
+![Git collaborative]({{ site.baseurl }}/fig/pull.png "Pull remote changes")
+{:class="img-responsive"}
 
 > ## Pulling an updated README
 > When reviewing your new README file online, you have discover a typo and
