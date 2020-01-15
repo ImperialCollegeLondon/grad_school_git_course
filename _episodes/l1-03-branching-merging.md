@@ -31,7 +31,7 @@ In the previous section we tracked a guacamole recipe with Git.
 Up until now our repository had only one branch with one commit coming after the
 other:
 
-![Linear]({{ site.baseurl }}/fig/git-branch-1.svg "Linear git
+![Linear]({{ site.baseurl }}/fig/branch1.png "Linear git
 repository"){:class="img-responsive"}
 
 * Commits are depicted here as little boxes with abbreviated hashes.
@@ -60,8 +60,8 @@ The strength of version control is that it permits the researcher to **isolate
 different tracks of work**, which can later be merged to create a composite
 version that contains all changes:
 
-![Git collaborative]({{ site.baseurl }}/fig/git-collaborative.svg
-"description"){:class="img-responsive"}
+![Git collaborative]({{ site.baseurl }}/fig/branching_full_example.png "Example
+of commit history wit multiple branches and merges"){:class="img-responsive"}
 
 * We see branching points and merging points.
 * Main line development is often called `master`.
@@ -75,7 +75,7 @@ There are different branching strategies, but it is useful to think that a
 branch tells the story of a feature, e.g. "fast sequence extraction" or "Python
 interface" or "fixing bug in matrix inversion algorithm".
 
-### On which branch are we?
+### Which Branch Are We Using?
 
 To see where we are (where HEAD points to) use `git branch`:
 ~~~
