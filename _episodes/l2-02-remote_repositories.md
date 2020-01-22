@@ -158,7 +158,9 @@ Depending on whether you are starting from a remote repository and want to get
 > ## Pulling an updated README
 > When reviewing your new README file online, you have discover a typo and
 > decided to correct it directly in GitHub. Modify the README file online and
-> then synchronise the changes with your local repository.
+> then synchronise the changes with your local repository (tip: you can edit
+> any text file directly in GitHub by clicking in [the little pencil button](https://help.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository) 
+> in the upper right corner).
 >
 > > ## Solution
 > > ```bash
