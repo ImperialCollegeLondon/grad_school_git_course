@@ -25,6 +25,8 @@ Now that you have your repositories in GitHub, you will learn how to start
 
 ## Forking someone else's repository
 
+- By default, a public repository can be seen by anyone but only the owner can 
+ make changes e.g. create new commits or branches.
 - `forking` a repository means creating a copy of it in your own GitHub
  account.
 - This copy is fully under your control, and you can create branches, push new
@@ -168,8 +170,11 @@ To open a new issue, simply click on the `New Issue` green button on the right.
 >- Fork the administrator's repository. Administrator, did you notice how the
 > number of forks increases? Which GitHub users forked it from you? And from
 > the original repo?
->- Work on the recipes you have been assigned (you can work directly in
-> GitHub, there is no need to create a local repository). 
+>- Work on the recipes you have been assigned. Practice the concepts learnt
+> in previous episodes about cloning a repository, making the changes locally
+> and pushing those changes back to the remote repository. You can even try a
+> [gitflow aproach](https://nvie.com/posts/a-successful-git-branching-model/) 
+> if you feel ambitious!
 >- When ready, open a PR to the administrator's repo and request his/her review.
 >- Administrator, review the PR, request some changes and accept others. When
 > ready, merge the PR.
