@@ -47,31 +47,6 @@ that remote branch.
 
 Depending on whether you are starting from a remote repository and want to get 
  a local one out of it or the other way around, the steps are different. 
-  
-> ## Configuring a local repository from a remote
-> This involves the git command **clone**. Let's
-> create a local copy of the remote you created in Episode 1. 
->
->- In the main screen of your repository, click on the green button on the
-> right, **Clone or Download**, and copy the address that appears there. 
->- In the terminal, navigate to the directory where you want to create the local
-> repository, eg. `~/Documents`.
->- Then execute:
->
->```bash
->$ git clone [address of your remote repo]
->```
->- This will download the remote repository to `~/Documents/REPO_NAME` in full,
->with all the information on the branches available in `origin` and all the
-> git history.
->- By default, a local `master` branch will be created tracking the 
->`origin/master` branch.
->- If you get into the newly created directory, you can find some information
-> on the repository using the commands already discussed in Lesson 1, like
-> `git log` or `git branch -vv`, which should show that there is indeed just one
-> branch, `master` tracking `origin/master`)
-> ![Git collaborative]({{ site.baseurl }}/fig/clone.png "Effect of clonning a remote repository."){:class="img-responsive"}
-{: .challenge}
 
 > ## Configuring a remote repository from a local one
 > In this case, you have a local repository and you want to synchronise it
@@ -99,6 +74,31 @@ Depending on whether you are starting from a remote repository and want to get
 > `origin/master`, setting it as its upstream branch.
 >- You can check if things went well by going to GitHub: the repository there
 > should contain all the files of your local repository.
+{: .challenge}
+
+> ## Configuring a local repository from a remote
+> This involves the git command **clone**. Let's
+> create a local copy of the remote you created in Episode 1. 
+>
+>- In the main screen of your repository, click on the green button on the
+> right, **Clone or Download**, and copy the address that appears there. 
+>- In the terminal, navigate to the directory where you want to create the local
+> repository, eg. `~/Documents`.
+>- Then execute:
+>
+>```bash
+>$ git clone [address of your remote repo]
+>```
+>- This will download the remote repository to `~/Documents/REPO_NAME` in full,
+>with all the information on the branches available in `origin` and all the
+> git history.
+>- By default, a local `master` branch will be created tracking the 
+>`origin/master` branch.
+>- If you get into the newly created directory, you can find some information
+> on the repository using the commands already discussed in Lesson 1, like
+> `git log` or `git branch -vv`, which should show that there is indeed just one
+> branch, `master` tracking `origin/master`)
+> ![Git collaborative]({{ site.baseurl }}/fig/clone.png "Effect of clonning a remote repository."){:class="img-responsive"}
 {: .challenge}
 
 
