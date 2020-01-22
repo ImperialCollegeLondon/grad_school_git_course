@@ -4,18 +4,18 @@ teaching: 20
 exercises: 40
 questions:
 - "How can I make a contribution to other people repositories?"
-- "How do I know what changes other people is doing in my repo?"
+- "How do I know what changes other people are making in my repo?"
 objectives:
-- "Explain what forks and a pull requests (PR) are."
+- "Explain what forks and pull requests (PR) are."
 - "Open a PR to make a contribution to someone else's repository."
 - "Review a PR to check what changes have been made."
 - "(Bonus) Update your fork to keep it up to date with the original repository."
 keypoints:
 - "Forks and pull requests are GitHub concepts, not git."
-- "Pull request can be open to branches on your own repository or any other
+- "Pull request can be opened to branches on your own repository or any other
  fork."
 - "Some branches are restricted, meaning that PR cannot be open against them."
-- "Merging PR do not delete the original branch, just modifies the target one."
+- "Merging a PR does not delete the original branch, just modifies the target one."
 - "PR are often created to solve specific issues."
 ---
 
@@ -36,7 +36,7 @@ Now that you have your repositories in GitHub, you will learn how to start
  original repo, you open a `pull request`.
  
 The image below shows that this repository has been forked 6 times already. To
- fork it yourself, click in `fork` and choose your personal account.  
+ fork it yourself, click on `fork` and choose your personal account.  
 
 ![Git collaborative]({{ site.baseurl }}/fig/fork.png
  "Options in the upper right corner of the repository."){:class="img
@@ -123,7 +123,7 @@ the files that are different will appear below.
   "enhancement", "low priority" or "good first issue", for example.
 - Issues also can have one or more people assigned to them who will take care
  of sorting them out and closing them when done or if no longer relevant.
- 
+ - By default any GitHub user can create an issue in a public repository
 > ## Mentioning other issues and PR
 >
 > All issues and PR receive a tag number starting at 1 and preceded by #, 
