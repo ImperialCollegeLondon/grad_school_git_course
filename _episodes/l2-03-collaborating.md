@@ -45,7 +45,8 @@ The image below shows that this repository has been forked 6 times already. To
  -responsive"}
  
 > ## Playing with a fork
-> Visit [GITHUB REPOSITORY] and fork it. Explore the options in the repo. What's
+> Visit [this repository](https://github.com/ImperialCollegeLondon/R2T2)
+> and fork it. Explore the options in the repo. What's
 > different from a repository you created? And from the original one?
 > > ## Solution
 > > - The only visual difference with one of your repos is that there is a note
@@ -159,7 +160,8 @@ To open a new issue, simply click on the `New Issue` green button on the right.
 > 
 > Form groups of 3-4 people and choose one to act as administrator. This
 > person should:
->- Fork [THIS REPOSITORY] with the skeleton of the book.
+>- Fork the [Book of Recipes repository](https://github.com/ImperialCollegeLondon/book_of_recipes)
+> with the skeleton of the book.
 >- Pass the link to the repo to your colleagues. 
 >
 > Now, start collaborating!
