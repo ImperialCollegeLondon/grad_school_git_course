@@ -29,27 +29,28 @@ services let you do precisely that, keeping all the advantages of VCS and
 adding on top tools to ease the collaborative development of the code:
 
 - Managing different people working on different features.
-- Keeping track of the changes introduced in the code and by whom. 
+- Keeping track of the changes introduced in the code and by whom.
 - Opening, reviewing, discussing and merging "pull requests".
-- Opening "issues" to report bugs, request features or discuss different
- aspects of the code.
-   
+- Opening "issues" to report bugs, request features or discuss different aspects
+  of the code.
+
 ## GitHub: Why GitHub?
 
 There are several widely used repository hosting services using Git, such as
-[GitLab](https://about.gitlab.com) or [Bitbucket](https://bitbucket.org/product). 
-In this course we will use [GitHub](https://github.com) because:
- 
+[GitLab](https://about.gitlab.com) or
+[Bitbucket](https://bitbucket.org/product). In this course we will use
+[GitHub](https://github.com) because:
+
 - It is very easy to use and setup.
 - It is, arguably, the most used hosting service of them all.
 - Imperial has a Git Organisation account any Imperial staff or student can
-join.
+  join.
 
 > ## Setting up a Github account
 >
 > - Go to [https://github.com](https://github.com).
 > - Fill the form with your details. **Use your Imperial College email
-> account!**
+>   account!**
 > - Select a Free plan.
 > - Complete the questionnaire (Optional) or click on **Skip this step**.
 > - You should receive an email shortly to verify your address. Click in
@@ -60,7 +61,6 @@ join.
 > Hold on there, as this requires discussing some concepts first.
 {: .challenge}
 
-
 ### Private vs public repositories
 
 Depending of who you want to give access to your repository, there are two
@@ -69,19 +69,19 @@ one you will need to make, is not written in stone and you can set a repo
 private initially and making it public later on.
 
 When you are part of an organization account, there are more options to
-control the visibility of a repository. 
- 
+control the visibility of a repository.
+
 #### Private repositories
 
 - Only you and the GitHub users you choose can have access to the repository.
 - The repository is not listed in the GitHub directory neither it is
- discoverable gy Google and other search engines. 
+  discoverable by Google and other search engines.
 - Ideal for testing, for projects with a view on commercialization, preliminary
-work on future open projects or for school/Msc/PhD projects not meant ot be
- public.
+  work on future open projects or for school/Msc/PhD projects not meant ot be
+  public.
 - Free accounts (except if part of an Organisation account) have several
- limitations on the features that a private repository has (eg. maximum 3
-  collaborators, no GitHub pages, etc.). 
+  limitations on the features that a private repository has (eg. maximum 3
+  collaborators, no GitHub pages, etc.).
 
 #### Public repositories
 
@@ -89,8 +89,8 @@ work on future open projects or for school/Msc/PhD projects not meant ot be
  depends on the license; see below).
 - You keep control on who will be able to contribute to the repository.
 - The choice for open source projects and to share your work to a wider
- potential user base. 
- 
+  potential user base.
+
 > ## Open Source Projects
 >
 > There is a growing recognition that reproducibility and open source practices
@@ -116,14 +116,14 @@ directory of your repository:
 ### README.md
 
 - Written in [Markdown](https://guides.github.com/features/mastering-markdown),
-it is the front page of your repo.
+  it is the front page of your repo.
 - Should describe in lay terms (or not) the purpose of the software, intended
- audience, etc. 
+  audience, etc.
 - Should include simplified installation instructions or a link to more
- detailed instructions described elsewhere.
+  detailed instructions described elsewhere.
 - Often includes [badges](https://github.com/badges/shields), providing quick
-information on the status of the documentation, the builds, the software
- version, license, etc.
+  information on the status of the documentation, the builds, the software
+  version, license, etc.
 - For inspiration see [Solcore](https://github.com/qpv-research-group/solcore5)
 - For further guidance see [Make a README](https://www.makeareadme.com/) or this
   [template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
@@ -132,15 +132,17 @@ information on the status of the documentation, the builds, the software
 
 - Important in any repository, essential in a public one.
 - Describes how people is allowed to use (and re-use) the information in your
- repository.
+  repository.
 - Do use an standard licence file to avoid headaches and legal issues later on.
 - If your repository is part of an Organisation, make sure this organisation
- allows that licence. Ultimately, it will be them the ones having to fight
+  allows that licence. Ultimately, it will be them the ones having to fight
   any legal battles!!
 - Licence choice is also something you should consider discussing with your
   supervisor if relevant, they may have strong views.
 
-See [GitHub Help: Adding a license to a repository](https://help.github.com/en/github/building-a-strong-community/adding-a-license-to-a-repository). 
+See [GitHub Help: Adding a license to a repository][adding-licence]
+
+[adding-licence]: https://help.github.com/en/github/building-a-strong-community/adding-a-license-to-a-repository
 
 > ## Licence for Imperial College London software
 >
@@ -163,16 +165,16 @@ See [GitHub Help: Adding a license to a repository](https://help.github.com/en/g
 > topic (including how to licence things that are not software) are:
 >
 > - [Open Source Initiative](http://opensource.org/)
-> - [https://choosealicense.com](https://choosealicense.com) 
+> - [https://choosealicense.com](https://choosealicense.com)
 {: .callout}
 
 ### Installation process/instructions
 
 - If short, they can be part of the README file above.
-- Otherwise, they should have their own INSTALLATION.md file and, definitely, 
-be included in any documentation you write for the software.
+- Otherwise, they should have their own INSTALLATION.md file and, definitely,
+  be included in any documentation you write for the software.
 - Should be complete and specific for any operating system and platform you
- want to support. 
+  want to support.
 - If you know your software will not work in, let's say, Windows, say so!!
 
 ### CITATION.txt
@@ -185,10 +187,10 @@ be included in any documentation you write for the software.
 >
 > If you are serious about what you are doing and want people to really cite
 > your work properly - and get recognition for it - consider providing your
-> repo with a digital object identifier (DOI). You can get one from: 
+> repo with a digital object identifier (DOI). You can get one from:
 >
 > - [Zenodo](https://zenodo.org)
-> - [Figshare](https://figshare.com) 
+> - [Figshare](https://figshare.com)
 {: .callout}
 
 ### CONTRIBUTING.md
@@ -198,45 +200,51 @@ be included in any documentation you write for the software.
 - Often, also have links to external documentation, mailing lists, or a code of
  conduct and community and behavioral expectations.
 
-See [GitHub Help: Setting guidelines for repository contributors](https://help.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors). 
+See [GitHub Help: Setting guidelines for repository contributors][contributors].
+
+[contributors]: https://help.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors
 
 > ## Creating a repository
 >
 > Now you have all the information you need to create a new repository in
 > GitHub. Just follow this steps:
 >
->- Continue where you left it after creating the GitHub account above or go to
-> **Your repositories** page in GutHub and click **New**.
->- Choose a name for your repository (a memorable, but simple one!)
->- Add a short description for your project.
->- You are going to create a **Public** repository, so select that option.
->- Click on **Initialize this repository with a README**. This will create an
-> empty README file in the root directly that you can edit later on.
->- Select a licence for your repository. Which one is up to you, but make sure
-> you have read what they entail before (Tip: there is a little "i" next to
-> the dropdown list with some help on this. In case of doubt, choose BSD 3
->-clause.
+> - Continue where you left it after creating the GitHub account above or go to
+>   **Your repositories** page in GutHub and click **New**.
+> - Choose a name for your repository (a memorable, but simple one!)
+> - Add a short description for your project.
+> - You are going to create a **Public** repository, so select that option.
+> - Click on **Initialize this repository with a README**. This will create an
+>   empty README file in the root directly that you can edit later on.
+> - Select a licence for your repository. Which one is up to you, but make sure
+>   you have read what they entail before (Tip: there is a little "i" next to
+>   the dropdown list with some help on this. In case of doubt, choose BSD 3
+>   -clause.
 >
 > > ## Solution
 > > Your repository is now ready and you should see something similar to this:
 > > ![New Repository](../fig/new_repo.jpg)
-> > It tells you there is only 1 commit, 1 branch and 1 contributor, the
-> of licence you have chosen and also that there are two files: LICENSE and
-> README.md, which is also rendered immediately below.
+> > It tells you there is only 1 commit, 1 branch and 1 contributor, the type
+> > of licence you have chosen and also that there are two files: LICENSE and
+> > README.md, which is also rendered immediately below.
 > {: .solution}
 > To make this complete, let's add some contributing guidelines:
 >
 >- Go to **Insights** in the upper right corner of the repository.
 >- And then click on **Community** on the left hand side. 
 >- The screen nows shows how the project compares with the recommended
-> community standards. Is not bad, but could be better.
+>  community standards. Is not bad, but could be better.
 >- Click on **Add** in the *Contributing* line. In the new screen you can
-> write your contributing guidelines. **Tip**: *No one* writes this from
-> scratch.
-> Have a look at some [Examples of contributing guidelines](https://help
->.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors#examples-of-contribution-guidelines) and copy/paste those parts relevant for your project.
->- Once you are done, click on **Commit** and the changes will be confirmed
->. Now you should see a CONTRIBUTING.md file in the root directory.
+>  write your contributing guidelines. **Tip**: *No one* writes this from
+>  scratch.
+>
+> Have a look at some [Examples of contributing
+> guidelines][contributing-examples] and copy/paste those parts relevant for
+> your project.
+> - Once you are done, click on **Commit** and the changes will be confirmed.
+>   Now you should see a CONTRIBUTING.md file in the root directory.
 {: .challenge}
+
+[contributing-examples]: https://help.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors#examples-of-contribution-guidelines
 
 {% include links.md %}
