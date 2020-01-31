@@ -60,11 +60,6 @@ join.
 > Hold on there, as this requires discussing some concepts first.
 {: .challenge}
 
-> ## Joining Imperial's Organization Account
->
-> [TO BE DONE]
-{: .challenge}
-
 
 ### Private vs public repositories
 
