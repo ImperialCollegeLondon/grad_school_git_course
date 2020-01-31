@@ -45,21 +45,8 @@ There are several widely used repository hosting services using Git, such as
 - It is, arguably, the most used hosting service of them all.
 - Imperial has a Git Organisation account any Imperial staff or student can
   join.
-
-> ## Setting up a Github account
->
-> - Go to [https://github.com](https://github.com).
-> - Fill the form with your details. **Use your Imperial College email
->   account!**
-> - Select a Free plan.
-> - Complete the questionnaire (Optional) or click on **Skip this step**.
-> - You should receive an email shortly to verify your address. Click in
-> **Verify email address** in that email.
-> - Congratulations! Now you have a GitHub account!
-> 
-> After verifying your email, you will be prompted to create a new repository. 
-> Hold on there, as this requires discussing some concepts first.
-{: .challenge}
+- You should have already created an account on GitHub according to the [setup
+  instructions](../setup).
 
 ### Private vs public repositories
 
