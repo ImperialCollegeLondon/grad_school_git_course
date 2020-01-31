@@ -1,5 +1,5 @@
 ---
-title: "Episode 2: Remote repositories"
+title: "Remote repositories"
 teaching: 20
 exercises: 20
 questions:

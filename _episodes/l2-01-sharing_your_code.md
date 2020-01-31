@@ -1,5 +1,5 @@
 ---
-title: "Episode 1: Sharing your code"
+title: "Sharing your code"
 teaching: 10
 exercises: 10
 questions:

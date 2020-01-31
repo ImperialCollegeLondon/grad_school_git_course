@@ -1,5 +1,5 @@
 ---
-title: "Episode 3: Collaborating"
+title: "Collaborating"
 teaching: 20
 exercises: 40
 questions:
