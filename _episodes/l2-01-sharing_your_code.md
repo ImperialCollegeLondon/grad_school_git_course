@@ -93,8 +93,20 @@ work on future open projects or for school/Msc/PhD projects not meant ot be
  
 > ## Open Source Projects
 >
-> [SOME EVANGELISM ON OPEN SCIENCE AND OPEN SOURCE SOFTWARE].
+> There is a growing recognition that reproducibility and open source practices
+> in scientific software development are closely interrelated. It is
+> increasingly expected that publications are accompanied by the analysis code
+> and raw data used to create them. As a budding researcher one of the best ways
+> to improve the impact of your work is to make it as easy to reproduce as
+> possible.
+>
+> Read more:
+> * [Open Science Massively Open Online Course](https://opensciencemooc.eu/about/)
+> * [The Turing Way][turing-way]
+> * [The OpenScience Project](http://openscience.org/about-openscience/)
 {: .callout}
+
+[turing-way]: https://www.turing.ac.uk/research/research-projects/turing-way-handbook-reproducible-data-science#introduction
 
 ## Things to include in your project
 
@@ -103,7 +115,7 @@ directory of your repository:
 
 ### README.md
 
-- Written in [Markdown](https://guides.github.com/features/mastering-markdown), 
+- Written in [Markdown](https://guides.github.com/features/mastering-markdown),
 it is the front page of your repo.
 - Should describe in lay terms (or not) the purpose of the software, intended
  audience, etc. 
@@ -111,9 +123,12 @@ it is the front page of your repo.
  detailed instructions described elsewhere.
 - Often includes [badges](https://github.com/badges/shields), providing quick
 information on the status of the documentation, the builds, the software
- version, license, etc. 
+ version, license, etc.
+- For inspiration see [Solcore](https://github.com/qpv-research-group/solcore5)
+- For further guidance see [Make a README](https://www.makeareadme.com/) or this
+  [template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
 
-### License
+### Licence
 
 - Important in any repository, essential in a public one.
 - Describes how people is allowed to use (and re-use) the information in your
@@ -122,19 +137,24 @@ information on the status of the documentation, the builds, the software
 - If your repository is part of an Organisation, make sure this organisation
  allows that licence. Ultimately, it will be them the ones having to fight
   any legal battles!!
+- Licence choice is also something you should consider discussing with your
+  supervisor if relevant, they may have strong views.
 
 See [GitHub Help: Adding a license to a repository](https://help.github.com/en/github/building-a-strong-community/adding-a-license-to-a-repository). 
 
 > ## Licence for Imperial College London software
 >
-> Imperial College preferred licence is the permissive BSD 2- or 3- clause. You
-> can check the details at [Imperial website: Open Source Software Licences
->](https://www.imperial.ac.uk/enterprise/staff/industry-partnerships-and
->-commercialisation/commercialisation/intellectual-property-guidance/open
->-source-software-licences/).
-> This website also tells you who you should contact in case you want a
-> different licence model for your work.
+> Imperial College's preferred licence is the permissive BSD 2- or 3-clause. You
+> can check the details at [Imperial website: Open Source Software
+> Licences][licence-guidance]. The guidance on this site is primarily intended
+> for members of staff however it is correct for graduate students with the
+> exception that ([subject to certain conditions][ip-guidance]) you are entitled
+> to hold the copyright. This site also tells you who you should contact in case
+> you want a different licence model for your work e.g. commercial.
 {: .callout}
+
+[licence-guidance]: https://www.imperial.ac.uk/enterprise/staff/industry-partnerships-and-commercialisation/commercialisation/intellectual-property-guidance/open-source-software-licences/
+[ip-guidance]: https://www.imperial.ac.uk/research-and-innovation/about-imperial-research/research-integrity/ip/
 
 > ## Open Source software licences
 >
@@ -151,7 +171,7 @@ See [GitHub Help: Adding a license to a repository](https://help.github.com/en/g
 - If short, they can be part of the README file above.
 - Otherwise, they should have their own INSTALLATION.md file and, definitely, 
 be included in any documentation you write for the software.
-- Should be complete and specific for any operative system and platform you
+- Should be complete and specific for any operating system and platform you
  want to support. 
 - If you know your software will not work in, let's say, Windows, say so!!
 
@@ -193,7 +213,7 @@ See [GitHub Help: Setting guidelines for repository contributors](https://help.g
 >- Click on **Initialize this repository with a README**. This will create an
 > empty README file in the root directly that you can edit later on.
 >- Select a licence for your repository. Which one is up to you, but make sure
-> you have read what they entitle before (Tip: there is a little "i" next to
+> you have read what they entail before (Tip: there is a little "i" next to
 > the dropdown list with some help on this. In case of doubt, choose BSD 3
 >-clause.
 >
@@ -206,7 +226,7 @@ See [GitHub Help: Setting guidelines for repository contributors](https://help.g
 > {: .solution}
 > To make this complete, let's add some contributing guidelines:
 >
->- Go to **Insigths** in the upper right corner of the repository.
+>- Go to **Insights** in the upper right corner of the repository.
 >- And then click on **Community** on the left hand side. 
 >- The screen nows shows how the project compares with the recommended
 > community standards. Is not bad, but could be better.
