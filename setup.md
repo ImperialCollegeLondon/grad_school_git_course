@@ -55,7 +55,7 @@ Please follow the relevant instructions depending on your operating system.
 #### Windows
 
 
-1. Download the Git for Windows installer.
+1. Download the Git for Windows [installer](https://git-for-windows.github.io/).
 1. Run the installer and follow the steps below:
    1. Click on "Next" four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.
    1. From the dropdown menu select "Use the nano editor by default" and click on "Next".
@@ -67,12 +67,11 @@ Please follow the relevant instructions depending on your operating system.
    1. Click on "Install".
    1. Click on "Finish".
 1. If your "HOME" environment variable is not set (or you don't know what this is):
-   1. Open command prompt (Open Start Menu then type cmd and press [Enter])
+   1. Open command prompt (Open Start Menu then type `cmd` and press [Enter])
    1. Type the following line into the command prompt window exactly as shown:
-   
-   1. setx HOME "%USERPROFILE%"
-   1. Press [Enter], you should see SUCCESS: Specified value was saved.
-   1. Quit command prompt by typing exit then pressing [Enter]
+   1. `setx HOME "%USERPROFILE%"`
+   1. Press [Enter], you should see `SUCCESS: Specified value was saved`.
+   1. Quit command prompt by typing `exit` then pressing [Enter]
 
 This will provide you with both Git and Bash via the program Git Bash. You
 should be able to launch Git Bash from the Start Menu. Within the window that
@@ -84,13 +83,17 @@ git version 2.23.0.windows-1
 
 #### MacOS
 
-For OS X 10.9 and higher, install Git for Mac by downloading and running the
-most recent "mavericks" installer from this list. Because this installer is not
-signed by the developer, you may have to right click (control click) on the
-.pkg file, click Open, and click Open on the pop up window. After installing
-Git, there will not be anything in your /Applications folder, as Git is a
-command line program. For older versions of OS X (10.5-10.8) use the most
-recent available installer labelled "snow-leopard" available here.
+**For OS X 10.9 and higher**, install Git for Mac by downloading and running the
+most recent "mavericks" installer from [this list][installer-list]. Because this
+installer is not signed by the developer, you may have to right click (control
+click) on the .pkg file, click Open, and click Open on the pop up window. After
+installing Git, there will not be anything in your `/Applications` folder, as
+Git is a command line program. **For older versions of OS X (10.5-10.8)** use
+the most recent available installer labelled "snow-leopard" [available
+here][snow-leopard].
+
+[installer-list]: http://sourceforge.net/projects/git-osx-installer/files/
+[snow-leopard]: http://sourceforge.net/projects/git-osx-installer/files/
 
 To check the installation was successful open the "Terminal" app. In the window
 that launches enter the command `git --version` and press enter. You should see
