@@ -170,7 +170,9 @@ Changes to be committed:
 ~~~
 {: .output}
 
-Now this change is ***staged*** and ready to be committed.
+Now this change is ***staged*** and ready to be committed (note that we could
+have saved some typing here with the command `git add ingredients.md
+instructions.md`).
 
 Let us now commit the change to the repository:
 
