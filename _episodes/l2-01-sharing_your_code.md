@@ -198,7 +198,7 @@ See [GitHub Help: Setting guidelines for repository contributors][contributors].
 >
 > - Once logged in to GitHub, press the `+` symbol in the top right, and choose
 >   `new repository` from the dropdown menu.
-> - Choose a name for your repository (a memorable, but simple one!)
+> - Give your repository the name `example`.
 > - Add a short description for your project.
 > - You are going to create a **Public** repository, so select that option.
 > - Click on **Initialize this repository with a README**. This will create an
@@ -217,13 +217,13 @@ See [GitHub Help: Setting guidelines for repository contributors][contributors].
 > {: .solution}
 > To make this complete, let's add some contributing guidelines:
 >
->- Go to **Insights** in the upper right corner of the repository.
->- And then click on **Community** on the left hand side. 
->- The screen nows shows how the project compares with the recommended
->  community standards. Is not bad, but could be better.
->- Click on **Add** in the *Contributing* line. In the new screen you can
->  write your contributing guidelines. **Tip**: *No one* writes this from
->  scratch.
+> - Go to **Insights** in the upper right corner of the repository.
+> - And then click on **Community** on the left hand side.
+> - The screen nows shows how the project compares with the recommended
+>   community standards. Is not bad, but could be better.
+> - Click on **Add** in the *Contributing* line. In the new screen you can
+>   write your contributing guidelines. **Tip**: *No one* writes this from
+>   scratch.
 >
 > Have a look at some [Examples of contributing
 > guidelines][contributing-examples] and copy/paste those parts relevant for

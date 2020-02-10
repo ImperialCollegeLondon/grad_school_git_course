@@ -25,80 +25,80 @@ keypoints:
 ## Remote and local repositories
 
 - The repository you just created in the previous episode is a **remote
- repository**: it is hosted by a third party hosting system, GitHub in this
+  repository**: it is hosted by a third party hosting system, GitHub in this
   case.
-- The repositories you used in Lesson 1 were all **local repositories**: they
- were just directories in your hard drive using git for version control.
-- Local and remote repositories can be synchronized, so changes are
- accessible by other contributors.
-- **This synchronisation is not automatic**: it has to be done explicitly
- for each branch you want to keep up to date (see **pull** and **push** below
- ).
+- The repository you used in Lesson 1 was a **local repository**: it was just a
+  directory on your hard drive using git for version control.
+- Local and remote repositories can be synchronized, so changes are accessible
+  by other contributors.
+- **This synchronisation is not automatic**: it has to be done explicitly for
+  each branch you want to keep up to date (see **pull** and **push** below ).
 - The default name for a remote repository synchronised with a local one is
- `origin`. 
+  `origin`.
 
 ### Tracking and upstream
 
-- A local branch synchronised with a remote one is said to be **tracking**
-that remote branch.
+- A local branch synchronised with a remote one is said to be **tracking** that
+  remote branch.
 - The remote branch being tracked is called the **upstream branch**.
 
 ## Configuring repositories
 
-Depending on whether you are starting from a remote repository and want to get 
- a local one out of it or the other way around, the steps are different. 
+Depending on whether you are starting from a remote repository and want to get a
+local one out of it or the other way around, the steps are different.
 
 > ## Configuring a remote repository from a local one
-> In this case, you have a local repository and you want to synchronise it
-> with an empty, remote one. Let's create a remote repository for the local
-> repository you worked on in Lesson 1. We will assume you are in your local
-> `master` branch:
 >
->- Create a new repository in GitHub, as in Episode 1. Give it a name
->, description and choose
-> if it should be public or private, but do not add any other file (no README
-> nor licence).
->- You will be offered a few options to populate the remote repository. We are
-> interested in the third one.
->- In the terminal, navigate to the directory where you have your local
-> repository, eg. `~/Documents/local_repo`.
->- Then execute:
+> In this case, you have a local repository and you want to synchronise it with
+> a new, remote one. Let's create a remote for the `recipe` repository you
+> worked on in Lesson 1:
+>
+> - Create a new repository in GitHub, as in the last episode. Give it a name,
+>   description and choose if it should be public or private, but do not add any
+>   other file (no README or licence).
+> - You will be offered a few options to populate the remote repository. We are
+>   interested in the third one.
+> - Launch a new command line interface and run `cd recipe` to navigate to the
+>   directory where you have your local repository - Then execute:
 >
 >```bash
->$ git remote add origin [address of your remote repo]
+>$ git remote add origin [address of your remote repo (should end in .git)]
 >$ git push -u origin master
+># you will be asked to provide your GitHub username and password
 >```
 >- The first line will set the GitHub repository as the remote for your
 > local one, calling it `origin`.
 >- The second line will push your master branch to a remote one called
-> `origin/master`, setting it as its upstream branch.
->- You can check if things went well by going to GitHub: the repository there
-> should contain all the files of your local repository.
+>  `origin/master`, setting it as its upstream branch.
+> - You can check if things went well by going to GitHub: the repository there
+>   should contain all the files of your local repository.
 {: .challenge}
 
 > ## Configuring a local repository from a remote
-> This involves the git command **clone**. Let's
-> create a local copy of the remote you created in Episode 1. 
+> This involves the git command **clone**. Let's create a local copy of the
+> `example` repository you created remotely in the last episode.
 >
->- In the main screen of your repository, click on the green button on the
-> right, **Clone or Download**, and copy the address that appears there. 
->- In the terminal, navigate to the directory where you want to create the local
-> repository, eg. `~/Documents`.
->- Then execute:
+> - On GitHub, press down arrow in the far top right and choose "Your
+>   repositories" from the drop-down menu.
+> - Choose the `example` repository from the list.
+> - In the main screen of your repository, click on the green button on the
+>   right, **Clone or Download**, and copy the address that appears there. 
+> - Open a new command line interface and execute the commands:
 >
->```bash
->$ git clone [address of your remote repo]
->```
->- This will download the remote repository to `~/Documents/REPO_NAME` in full,
->with all the information on the branches available in `origin` and all the
-> git history.
->- By default, a local `master` branch will be created tracking the 
->`origin/master` branch.
->- If you get into the newly created directory, you can find some information
-> on the repository using the commands already discussed in Lesson 1, like
-> `git log` or `git branch -vv`, which should show that there is indeed just one
-> branch, `master` tracking `origin/master`)
-> ![Git collaborative]({{ site.baseurl }}/fig/clone.png "Effect of clonning a remote repository."){:class="img-responsive"}
+> ```bash
+> $ git clone [address of your remote repo]
+> $ cd example
+> ```
+> - This will download the remote repository to a new `example` directory, in
+>   full, with all the information on the branches available in `origin` and all
+>   the git history.
+> - By default, a local `master` branch will be created tracking the
+>   `origin/master` branch.
+> - You can find some information on the repository using the commands already
+>   discussed in Lesson 1, like `git log` or `git branch -vv`, which should show
+>   that there is indeed just
+>   one branch, `master` tracking `origin/master`)
+> ![Git collaborative]({{ site.baseurl }}/fig/clone.png "Effect of cloning a remote repository."){:class="img-responsive"}
 {: .challenge}
 
 
@@ -121,12 +121,14 @@ Depending on whether you are starting from a remote repository and want to get
   discuss this into more detail in the next episode.
 
 > ## Pushing an updated README
-> You want to update the README file of the repository of Episode 1 with more
-> detailed information of what the repository is about and then push the
-> changes to the remote. 
-> Modify the README file of your local repository with your preferred editor
-> (any change is good enough, but better if they are useful - or at least, 
-> funny!) and synchronise the changes with the remote.
+> You want to update the README file of the `example` repository with more
+> detailed information of what the repository is about and then push
+> the changes to the remote.
+>
+> Modify the README file of your local copy of `example` with your preferred
+> editor (any change is good enough, but better if they are useful - or at
+> least, funny!) and synchronise the changes with the remote. Check on GitHub
+> that you can view the changes you made.
 >
 > > ## Solution
 > > ```bash
