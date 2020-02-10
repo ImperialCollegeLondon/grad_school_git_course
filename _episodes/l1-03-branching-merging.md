@@ -96,7 +96,7 @@ $ git branch
 * There is only `master` and we are on `master` (star represents the `HEAD`).
 
 In the following we will learn how to create branches, how to switch between
-them, how to merge branches, and how to remove them afterwards.
+them and how to merge changes from different branches.
 
 ---
 
@@ -180,20 +180,11 @@ with `git branch`.
 "Repository with HEAD at new experiment branch"){:class="img-responsive"}
 
 Now when we make new commits they will be part of the `experiment` branch. To
-test this let's add 2 tbsp coriander **at the top** of `ingredients.md`:
-
-```shell
-* 2 tbsp coriander
-* 2 avocados
-* 1 lime
-* 2 tsp salt
-* 1/2 onion
-```
-
-Stage this and commit it with the message "try with some coriander".
+test this let's add 2 tbsp coriander to `ingredients.md`. Stage this and commit
+it with the message "try with some coriander".
 
 ~~~
-$ git add
+$ git add ingredients.txt
 $ git commit -m "try with some coriander"
 $ git graph
 ~~~
@@ -413,7 +404,6 @@ we would like to keep, then add and commit as usual.
 
 Let's look at ingredients.md to understand the conflict:
 ~~~
-* 1 tbsp coriander
 * 2 avocados
 * 1 lime
 <<<<<<< HEAD
@@ -422,6 +412,7 @@ Let's look at ingredients.md to understand the conflict:
 * 3 tsp salt
 >>>>>>> experiment
 * 1/2 onion
+* 1 tbsp coriander
 ~~~
 
 Git has changed this file for us and added some lines which highlight the
