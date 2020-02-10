@@ -6,9 +6,15 @@ Completing this course requires you to have access to computer with some
 software prerequisites installed. If you are attending a delivery of this course
 in person through the Graduate School you have the option of using your own
 laptop or an ICT managed PC at the workshop venue. For instructions on setting
-up your own Laptop please see below. All attendees should join the Imperial
-Research Software Community Slack workspace and create a GitHub account before
-the workshop.
+up your own Laptop please see below. All attendees should download the zip file,
+join the Imperial Research Software Community Slack workspace and create a
+GitHub account before the workshop.
+
+## Downloading the Zip File
+
+The zip file containing files that will be used in the session is available
+[here](code/recipe.zip). Please download and **save it in your home directory,
+do not extract it yet**.
 
 ## Joining The Imperial Research Software Community Slack Workspace
 

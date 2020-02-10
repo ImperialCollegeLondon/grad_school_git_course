@@ -31,9 +31,15 @@ keypoints:
 ## First Things First
 
 You should have already completed the [setup instructions](../setup) for this
-workshop and have Git installed. There is still some extra information you must
-provide to Git before it is ready to use however. Enter the below commands using
-your relevant personal information as required (don't type the `$`).
+workshop and have Git installed. Launch a command line environment (in Windows
+launch "Git Bash" from the Start Menu, on Linux or Mac start a new Terminal). We
+will use this command line interface throughout these materials. We focus on
+teaching Git with the command line as we believe this is the most thorough and
+portable way to communicate the underlying concepts. 
+
+You can use the command line to interact with Git but there is still some extra
+information you must provide before it is ready to use. Enter the below commands
+using your relevant personal information as required (don't type the `$`).
 
 ~~~
 $ git config --global user.name "FIRST_NAME" "LAST_NAME"
@@ -75,13 +81,30 @@ Now that Git is ready to use lets see how to start using it with a new
 project. In Git terminology a project is called a repository (frequently
 shortened to repo). 
 
-For this workshop you were provided with a zip file containing a directory
-called `recipe` which in turn contains 2 files - `instructions.md` and
-`ingredients.md`. This is the project we'll be working with, whilst not based
-on code this recipe for guacamole is an intuitive example to illustrate the
-functionality of Git. Files with a `.md` extension are using a format called
-Markdown, don't worry about this now, for our immediate purposes these are just
-text files. Use of Markdown and Github will come up in the next session however.
+For this workshop you were provided with a [zip file](../code/recipe.zip). If
+you have not already, please download it and **place it in your home
+directory**. The zip file contains a directory called `recipe` which in turn
+contains 2 files - `instructions.md` and `ingredients.md`. This is the project
+we'll be working with, whilst not based on code this recipe for guacamole is an
+intuitive example to illustrate the functionality of Git. To extract the archive run the below command:
+~~~
+$ unzip recipe.zip
+~~~
+{: .commands}
+
+Then change the working directory of the terminal the newly created `recipe`
+directory:
+~~~
+$ cd recipe
+~~~
+{: .commands}
+
+You'll need to repeat `cd recipe` if you open a new command line interface. Feel
+free to open `ingredients.md` and `instructions.md` and take a look at them (use
+a normal file browser if you're not comfortable doing this on the command
+line). Files with a `.md` extension are using a format called Markdown, don't
+worry about this now, for our immediate purposes these are just text files. Use
+of Markdown and Github will come up in the next session however.
 
 To start using Git with our recipe we need to create a repository for it. Make
 sure the current working directory for your terminal is `recipe` and run:
@@ -240,11 +263,11 @@ different git areas and the commands seen so far"){:class="img-responsive"}
 > --color`.
 >
 > First, practice what we have just seen by **staging and committing** the
-> changes to `ingredients.md`. Remember to include an informative commit
+> changes to `instructions.md`. Remember to include an informative commit
 > message.
 >
 > Now, run `git status` and `git diff`. Then, **stage and commit** the changes
-> to `instructions.md` but, after each step run `git status`, `git diff` and
+> to `ingredients.md` but, after each step run `git status`, `git diff` and
 > `git diff --cached`. What is the difference between the two diff commands? How
 > does running staging and committing change the status of a file?
 >
