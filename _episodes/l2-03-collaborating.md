@@ -127,6 +127,7 @@ the files that are different will appear below.
 - Issues also can have one or more people assigned to them who will take care
  of sorting them out and closing them when done or if no longer relevant.
  - By default any GitHub user can create an issue in a public repository
+
 > ## Mentioning other issues and PR
 >
 > All issues and PR receive a tag number starting at 1 and preceded by #, 
