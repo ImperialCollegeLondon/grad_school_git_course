@@ -273,6 +273,15 @@ different git areas and the commands seen so far"){:class="img-responsive"}
 >
 {: .challenge}
 
+> ## Why stage?
+>
+> The last exercises highlights the reason Git use a staging area before making
+> commits. You can make file changes as you want all at once and then group them
+> together logically to make individual commits. We'll see why having only sets
+> of related changes for a specific purpose in a single commit is so useful
+> later on.
+{: .callout}
+
 ## Git History and Log
 
 We used `git log` previously to see the first commit we created. Let's run it
