@@ -196,8 +196,8 @@ See [GitHub Help: Setting guidelines for repository contributors][contributors].
 > Now you have all the information you need to create a new repository in
 > GitHub. Just follow this steps:
 >
-> - Continue where you left it after creating the GitHub account above or go to
->   **Your repositories** page in GutHub and click **New**.
+> - Once logged in to GitHub, press the `+` symbol in the top right, and choose
+>   `new repository` from the dropdown menu.
 > - Choose a name for your repository (a memorable, but simple one!)
 > - Add a short description for your project.
 > - You are going to create a **Public** repository, so select that option.
@@ -228,8 +228,8 @@ See [GitHub Help: Setting guidelines for repository contributors][contributors].
 > Have a look at some [Examples of contributing
 > guidelines][contributing-examples] and copy/paste those parts relevant for
 > your project.
-> - Once you are done, click on **Commit** and the changes will be confirmed.
->   Now you should see a CONTRIBUTING.md file in the root directory.
+> - Once you are done, click on **Commit new file** and the changes will be
+>   confirmed. Now you should see a CONTRIBUTING.md file in the root directory.
 {: .challenge}
 
 [contributing-examples]: https://help.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors#examples-of-contribution-guidelines
