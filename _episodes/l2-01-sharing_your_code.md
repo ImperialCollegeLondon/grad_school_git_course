@@ -118,9 +118,9 @@ directory of your repository:
 ### Licence
 
 - Important in any repository, essential in a public one.
-- Describes how people is allowed to use (and re-use) the information in your
+- Describes how people are allowed to use (and re-use) the information in your
   repository.
-- Do use an standard licence file to avoid headaches and legal issues later on.
+- Do use a standard licence file to avoid headaches and legal issues later on.
 - If your repository is part of an Organisation, make sure this organisation
   allows that licence. Ultimately, it will be them the ones having to fight
   any legal battles!!

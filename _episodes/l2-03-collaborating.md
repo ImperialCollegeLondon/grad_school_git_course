@@ -51,7 +51,7 @@ The image below shows that this repository has been forked 6 times already. To
 > > ## Solution
 > > - The only visual difference with one of your repos is that there is a note
 > > just below the name indicating where this repo was forked from. 
-> > - You can also open PR (see below) across forks.
+> > - You can also open a pull request (see below) across forks.
 > > - In the original repo, you don't have write access, i.e. you cannot
 > > modify any file or change any setting.
 >{: .solution}
@@ -59,7 +59,7 @@ The image below shows that this repository has been forked 6 times already. To
  
 ## Pull requests
 
-- `pull requests` (or PR, for short) are the GitHub method of contributing to
+- `pull requests` (or PRs, for short) are the GitHub method of contributing to
  other's people repositories and keep track of changes made to your own.
 - As with `forks`, PRs are a GitHub concept. 
 - A `pull request` means: "Hey, I have some changes I would like to contribute
@@ -103,7 +103,7 @@ the files that are different will appear below.
  before the changes can be merged into the target branch.
 - Only administrators of the target repository can merge PR.
 
-### Reviewing PR
+### Reviewing a PR
 
 - When reviewing a PR, you will be shown, for each file changed, a comparison
  between the old and the new  version, much like `git diff` (indeed, it is

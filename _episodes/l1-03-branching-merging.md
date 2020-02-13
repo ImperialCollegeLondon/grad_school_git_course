@@ -216,7 +216,7 @@ sense to create a correcting commit in `master`:
 ~~~
 $ git checkout master
 $ # make change to ingredients.md
-$ git add instructions.md
+$ git add ingredients.md
 $ git commit -m "Corrected typo in ingredients.md"
 $ git graph
 ~~~

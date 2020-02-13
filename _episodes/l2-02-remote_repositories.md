@@ -78,7 +78,7 @@ local one out of it or the other way around, the steps are different.
 > This involves the git command **clone**. Let's create a local copy of the
 > `example` repository you created remotely in the last episode.
 >
-> - On GitHub, press down arrow in the far top right and choose "Your
+> - On GitHub, the press down arrow in the far top right and choose "Your
 >   repositories" from the drop-down menu.
 > - Choose the `example` repository from the list.
 > - In the main screen of your repository, click on the green button on the
@@ -147,6 +147,8 @@ local one out of it or the other way around, the steps are different.
  branch by running `git fetch`, which only checks if there are changes, and then
   `git status` to see how your local and remote branch compare in terms of
    commit history.
+- It's best to make sure your repository is in a clean state with no staged or
+  unstaged changes.
 - If the local and upstream branches have diverged - have different
  commit history - the command will attempt to merge both, dealing with
   conflicts as discussed in Lesson 1.
