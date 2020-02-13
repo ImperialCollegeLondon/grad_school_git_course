@@ -154,6 +154,40 @@ To open a new issue, simply click on the `New Issue` green button on the right.
  "Example of issues."){:class="img
  -responsive"}
 
+## An example workflow
+
+We now have all of the components needed to start working collaboratively
+through GitHub. A typical workflow might look like this:
+
+* You discover a cool looking project on GitHub. You decide you want to help out
+  and browse through the `issues`. You find one you think you can help out with.
+* You `fork` the project to your own GitHub account.
+* You `clone` the project from your fork to your local machine.
+* You create a new branch with `git branch issue_fix` and check it out with `git
+  checkout issue_fix`
+* You make the changes to the code, creating several commits in the process
+* You push the new commits in the `issue_fix` branch to your remote copy of the
+  project with `git push -u origin issue_fix`
+* On GitHub you create a `Pull Request` merging your new branch into master of the
+  original project.
+* The project owner reviews your Pull Request and asks for some changes.
+* You make the changes in your local copy of the `issue_fix` branch and use `git
+  push` to update your remote fork with the new commits. This automatically
+  updates your Pull Request.
+* Your Pull Request is approved and accepted, the `issue_fix` branch is added to
+  the original repository and a merge commit is created incorporating your
+  changes.
+* Job done! You can delete your fork on GitHub if you want.
+
+If there is a group of you that will be working together on a project you can
+avoid needing to have individual forks by setting [up
+collaborators][collaborators]. This allows you to grant write access to other
+users to a public or private repository. In this case we still strongly
+recommend working in separate branches and communicating through issues and pull
+requests.
+
+[collaborators]: https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository
+
 > ## Making a book of recipes
 > Together with some colleagues, you are writing a book of recipes for sauces
 > and you are using git for version control and GitHub to collaborate in the
