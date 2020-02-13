@@ -344,7 +344,7 @@ A very common and frustrating occurrence when using Git is making a commit and
 then realising you forgot to stage something, or staged something you shouldn't
 have. Fortunately the Git commit history is not set in stone and can be changed.
 
-To undo a commit you can use:
+To undo the most recent commit you can use:
 ~~~
 $ git reset --soft HEAD^
 ~~~
