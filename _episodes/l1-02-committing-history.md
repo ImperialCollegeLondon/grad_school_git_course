@@ -58,20 +58,20 @@ to perform the above commands once for each new computer Git is installed on.
 > For users not generally familiar with using command line interfaces its worth
 > taking a moment to consider the commands that were just run. To understand
 > what we just did lets break down the first command:
-> 1. git
+> 1. `git`
 >   * This simply indicates to the command line that we want to something with
 >     Git.
 >   * All commands that we use today will start with this.
-> 2. config
+> 2. `config`
 >   * Git is a very powerful tool with lots of functionality so next we need to
 >     indicate what we want to do with it.
 >   * Putting `config` indicates we want to change something about how Git
 >     is configured.
-> 3. --global
+> 3. `--global`
 >   * Parts that start with dashes are called flags and are used to fine tune
 >     the behaviour of the command given.
 >   * The role of the `--global` flag is explained above.
-> 4. user.name "FIRST_NAME LAST_NAME"
+> 4. `user.name "FIRST_NAME LAST_NAME"`
 >   * Finally we tell Git what we want to configure and the details to use.
 {: .callout}
 
@@ -328,11 +328,19 @@ but in the alphanumeric sequence (hash) at the start of each commit.
 * Notice the label HEAD at the top, this indicates the indicates the commit that
   the current working directory is based on.
 
-> ## Exercise: Differences Between Commits
+> ## Exercise: Recalling the changes for a commit
 >
-> The diff command can also report the changes between the most recent commit
-> and a previous one using `git diff COMMIT_HASH`. Try this out with your own
-> repository. What happens if you put two different hashes after `git diff`?
+> The command `git log` shows us the metadata for a commit but to see the
+> file changes recorded in a commit you can use `git show`:
+> ```shell
+> $ git show [commit hash]
+> ```
+>
+> Use one of the commit hashes from your Git history. To see the contents from
+> when the commit was made try:
+> ```shell
+> $ git show [commit hash]:ingredients.md
+> ```
 {: .challenge}
 
 ## To Err is Human, To Revert Divine
