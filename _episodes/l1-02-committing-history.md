@@ -42,7 +42,7 @@ information you must provide before it is ready to use. Enter the below commands
 using your relevant personal information as required (don't type the `$`).
 
 ~~~
-$ git config --global user.name "FIRST_NAME" "LAST_NAME"
+$ git config --global user.name "FIRST_NAME LAST_NAME"
 $ git config --global user.email "email@example.com"
 ~~~
 {: .commands}
@@ -71,7 +71,7 @@ to perform the above commands once for each new computer Git is installed on.
 >   * Parts that start with dashes are called flags and are used to fine tune
 >     the behaviour of the command given.
 >   * The role of the `--global` flag is explained above.
-> 4. user.name "FIRST_NAME" "LAST_NAME"
+> 4. user.name "FIRST_NAME LAST_NAME"
 >   * Finally we tell Git what we want to configure and the details to use.
 {: .callout}
 
