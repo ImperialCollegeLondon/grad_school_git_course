@@ -328,11 +328,19 @@ but in the alphanumeric sequence (hash) at the start of each commit.
 * Notice the label HEAD at the top, this indicates the indicates the commit that
   the current working directory is based on.
 
-> ## Exercise: Differences Between Commits
+> ## Exercise: Recalling the changes for a commit
 >
-> The diff command can also report the changes between the most recent commit
-> and a previous one using `git diff COMMIT_HASH`. Try this out with your own
-> repository. What happens if you put two different hashes after `git diff`?
+> The command `git log` shows us the metadata for a commit but to see the
+> file changes recorded in a commit you can use `git show`:
+> ```shell
+> $ git show [commit hash]
+> ```
+>
+> Use one of the commit hashes from your Git history. To see the contents from
+> when the commit was made try:
+> ```shell
+> $ git show [commit hash]:ingredients.md
+> ```
 {: .challenge}
 
 ## To Err is Human, To Revert Divine
