@@ -27,7 +27,7 @@ mistake, some awkward wording, or a factual error.
 
 There are many ways to contribute, from writing new exercises and improving
 existing ones to updating or filling in the documentation and submitting [bug
-reports][issues] about things that don't work, aren't clear, or are missing.  If
+reports][issues] about things that don't work, aren't clear, or are missing. If
 you are looking for ideas, please see the 'Issues' tab for a list of issues
 associated with this repository.
 
@@ -37,27 +37,18 @@ particularly valuable: it's easy for people who have been using these lessons
 for a while to forget how impenetrable some of this material can be, so fresh
 eyes are always welcome.
 
-## What *Not* to Contribute
-
-Our lessons already contain more material than we can cover in a typical
-workshop, so we are usually *not* looking for more concepts or tools to add to
-them.  As a rule, if you want to introduce a new idea, you must (a) estimate how
-long it will take to teach and (b) explain what you would take out to make room
-for it.  The first encourages contributors to be honest about requirements; the
-second, to think hard about priorities.
-
-We are also not looking for exercises or other material that only run on one
-platform. Our workshops typically contain a mixture of Windows, macOS, and Linux
-users; in order to be usable, our lessons must run equally well on all three.
+If you would like to propose new content or exercises please make sure to create
+an issue and get the thoughts of the maintainers. Please try to bear in mind
+that any new material must be compatible with Windows, macOS and Linux.
 
 ## Using GitHub
 
 If you choose to contribute via GitHub, you may want to look at [How to
 Contribute to an Open Source Project on GitHub][how-contribute].  To manage
-changes, we follow [GitHub flow][github-flow].  Each lesson has two maintainers
-who review issues and pull requests or encourage others to do so.  The
-maintainers are community volunteers and have final say over what gets merged
-into the lesson.  To use the web interface for contributing to a lesson:
+changes, we follow [GitHub flow][github-flow].  This lesson is maintained by the
+Research Software Engineering team at Imperial College, who will review and
+approve any contributions.  To use the web interface for contributing to a
+lesson:
 
 1.  Fork the originating repository to your GitHub profile.
 2.  Within your version of the forked repository, move to the `gh-pages` branch
