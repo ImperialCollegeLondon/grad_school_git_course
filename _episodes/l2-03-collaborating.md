@@ -136,6 +136,16 @@ the files that are different will appear below.
 > linked from the comment. 
  {: .callout}
 
+> ## Claim issues
+>
+> There are some [restrictions](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) on who can be assigned to an issue. If you do
+> not have write access to the repository (which is often the case) and you
+> are not part of the same organisation of the repository, the only way of
+> being assigned to an Issue is by making a comment on the Issue. This also
+> serves to warn others that you are volunteering to work on that. A "Hey, I
+> can tackle this." is often enough. 
+> {: .callout}
+
 > ## Closing issues
 >
 > If a PR tackles a particular issue, you can automatically close that issue
@@ -199,11 +209,21 @@ requests.
 > with the skeleton of the book.
 >- Pass the link to the repo to your colleagues. 
 >
+> > ## Enabling issues in forks
+> >
+> > By default, when you fork a repository, Issues are disabled. To enable
+> > them go to `Settings` in the upper right corner, then to `Options` in the
+> > left panel and, finally, scroll down to the `Features` section. There
+> > click the Issues tickbox to enable them. 
+> > {: .callout}
+>
 > Now, start collaborating!
 >- All, including the administrator, open new issues with recipes for sauces you
 > will like to have in the book.
 >- Administrator, add some tags, prioritising some of the recipes, and assign
 > yourself or one of your colleagues as responsible for each of them.
+> Remember you will need to "Claim the Issue" first in order to be assigned
+> to it, as discussed above. 
 >- Fork the administrator's repository. Administrator, did you notice how the
 > number of forks increases? Which GitHub users forked it from you? And from
 > the original repo?
