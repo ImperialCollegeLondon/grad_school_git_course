@@ -38,7 +38,8 @@ a valuable asset in your work.
 ## Creating a GitHub Account
 
 - Go to [https://github.com](https://github.com).
-- Fill the form with your details. **Use your Imperial College email account!**
+- Fill the form with your details, you may wish to use your College email
+  address but this is not a requirement.
 - Select the Free plan.
 - Complete the questionnaire (Optional) or click on **Skip this step**.
 - You should receive an email shortly to verify your address. Click **Verify
