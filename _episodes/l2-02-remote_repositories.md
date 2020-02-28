@@ -51,7 +51,8 @@ local one out of it or the other way around, the steps are different.
 >
 > In this case, you have a local repository and you want to synchronise it with
 > a new, remote one. Let's create a remote for the `recipe` repository you
-> worked on in Lesson 1:
+> worked on in Lesson 1. If you have lost your copy of the `recipe` repository
+> you can download a completed copy [here](../code/recipe_complete.zip):
 >
 > - Create a new repository in GitHub, as in the last episode. Give it a name,
 >   description and choose if it should be public or private, but do not add any
