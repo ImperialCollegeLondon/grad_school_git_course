@@ -1,0 +1,44 @@
+\usepackage{fullpage}
+\usepackage{tcolorbox}
+
+\definecolor{navy}{RGB}{0,33,71}
+\definecolor{lightgrey}{RGB}{235,238,238}
+\definecolor{imperialblue}{RGB}{0,62,116}
+\definecolor{lightblue}{RGB}{212,239,252}
+\definecolor{coolgrey}{RGB}{157,157,157}
+\setlength{\parindent}{0pt}
+
+\newcommand{\boxed}[4][]{
+  \begin{tcolorbox}[width=(0.95\textwidth)/#2,title=#3,before=,after=\hfill,
+      colback=lightgrey,colframe=imperialblue,fonttitle=\bfseries,#1]
+    #4
+  \end{tcolorbox}
+}
+\newenvironment{navybox}[1][]{
+  \begin{tcolorbox}[colback=lightgrey,colframe=navy,
+      fonttitle=\bfseries,#1]
+}{
+  \end{tcolorbox}
+}
+\newenvironment{bluebox}[1][]{
+  \begin{tcolorbox}[colback=lightgrey,colframe=imperialblue,
+      fonttitle=\bfseries,#1]
+}{
+  \end{tcolorbox}
+}
+
+\newcommand{\furtherhelp}{
+\subsection*{Further Help}
+This course was developed by the Research Computing Service (RCS) of Imperial
+College, in particular by the Research Software Engineering (RSE) team. The RSE
+team are a part of Imperial ICT combining specialist knowledge in software
+engineering with extensive experience in research. The team works with academic
+groups on a wide range of projects whilst also organising community events and
+training (such as this course) for the benefit of the research community. You
+can find out more at the RSE team website (http://bit.ly/2SFropB) and the
+Imperial RSE Community website (http://bit.ly/2Hynf0q). You can also consult the
+expertise of the RSE team at the weekly RCS clinic (http://bit.ly/2SENqbU).
+
+You may also be interested in attending another course developed by the RSE team
+titled \textbf{``Essential Software Engineering for Researchers''} bookable via the Graduate School (http://bit.ly/2SHIwuI).
+}

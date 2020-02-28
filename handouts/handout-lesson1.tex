@@ -1,0 +1,80 @@
+\documentclass[9pt]{extarticle}
+\input{common.tex}
+\usepackage{multicol}
+
+\def\boxpad{4pt}
+\tcbsetforeverylayer{left=\boxpad,right=\boxpad,top=\boxpad,bottom=\boxpad}
+
+\def\itempad{-1pt}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\LARGE
+  Using Git to Code, Collaborate and Share - Lesson 1 - URL: v.gd/gitcourse}
+\end{center}
+
+\begin{navybox}[title=Why use version control?]
+  \begin{multicols}{2}
+    \begin{itemize}
+      \itemsep\itempad
+    \item To avoid multiple copies of files
+    \item To collaborate
+    \item To aid reproducibility
+    \item To keep track of your work
+    \item To find mistakes
+    \item To work different things
+    \end{itemize}
+  \end{multicols}
+\end{navybox}
+
+\begin{bluebox}[title=Git Glossary]
+  \begin{itemize}
+    \itemsep\itempad
+  \item \textbf{Repository/Repo} -- A project that is being managed by Git
+  \item \textbf{Commit/Changeset} -- A set of changes recorded in the history of
+    a project
+  \item \textbf{Staging Area} -- The location where file changes are recorded to
+    prepare for inclusion in a commit
+  \item \textbf{Working Directory/Working Tree} -- The visible copy of files in a
+    project that you view and edit as usual
+  \item \textbf{Branch} -- A label used for a set of commits with a particular
+    purpose
+  \item \textbf{HEAD} -- The current commit that the Working Directory is based on
+  \item \textbf{master} -- The default name given to the starting branch of all repositories
+  \end{itemize}
+\end{bluebox}
+
+\begin{navybox}[title=Git Command Cheat Sheet]
+  \begin{itemize}
+    \itemsep\itempad
+  \item \textbf{git config} -- Change the settings that Git uses
+  \item \textbf{git init} -- Create a new repository in the current directory
+  \item \textbf{git status} -- High-level overview of changes made since the last
+    commit
+  \item \textbf{git add} -- Stage a file (or changes made to a file) for
+    inclusion in the next commit
+  \item \textbf{git commit -m ``COMMIT MESSAGE''} -- Create a new commit
+    including all staged file changes
+  \item \textbf{git log} -- Display the commit history of a repository
+  \item \textbf{git diff} -- Show in detail the changes made in the working
+    directory since the last commit
+  \item \textbf{git reset -{}-soft HEAD\^} -- Remove the last commit from the
+    history of a repository
+  \item \textbf{git revert -{}-no-edit COMMIT\_HASH} -- Create a new commit that
+    undoes the changes of the specified commit
+  \item \textbf{git branch} -- Report on the existing branches in a repository
+  \item \textbf{git branch BRANCH\_NAME} -- Create a new branch
+  \item \textbf{git checkout} -- Update the position of HEAD to a new branch or
+    commit
+  \item \textbf{git merge -{}-no-edit BRANCH\_NAME} -- Merge BRANCH\_NAME into the
+    current branch
+  \end{itemize}
+\end{navybox}
+
+
+\furtherhelp
+
+\end{document}

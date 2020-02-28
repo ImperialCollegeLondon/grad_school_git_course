@@ -114,6 +114,13 @@ lesson-files :
 lesson-fixme :
 	@fgrep -i -n FIXME ${MARKDOWN_SRC} || true
 
+## handout-lesson?  : build lesson 1 or 2 handout using docker texlive image
+handout-lesson%:
+	docker run --rm -it -v ${PWD}:/mnt/ adnrv/texlive:latest bash -xc "cp /mnt/handouts/*.tex /tmp/; pdflatex --output-directory=/tmp -interaction=nonstopmode /tmp/$@.tex; chown $$(id -u):$$(id -g) /tmp/$@.pdf; mv /tmp/$@.pdf /mnt/handouts/"
+
+## handouts         : convenience rule to build both handouts
+handouts: handout-lesson1 handout-lesson2
+
 #-------------------------------------------------------------------------------
 # Include extra commands if available.
 #-------------------------------------------------------------------------------
