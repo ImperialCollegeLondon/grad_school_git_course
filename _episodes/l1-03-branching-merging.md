@@ -1,5 +1,5 @@
 ---
-title: "Braching and Merging"
+title: "Branching and Merging"
 teaching: 40
 exercises: 20
 questions:
