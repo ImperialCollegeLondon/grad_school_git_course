@@ -338,8 +338,8 @@ $ git graph
 ~~~
 {: .commands}
 ~~~
-* d5fb141 (experiment) Added salt to balance coriander
-| * 7477632 (HEAD -> master) reduce salt
+* d5fb141 (HEAD -> experiment) Added salt to balance coriander
+| * 7477632 (master) reduce salt
 | *   567307e Merge branch 'experiment'
 | |\  
 | |/  
