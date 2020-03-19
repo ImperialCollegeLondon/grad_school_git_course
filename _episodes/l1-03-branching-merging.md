@@ -427,11 +427,11 @@ for Git to know which it should be so it has to ask you. Let's resolve it by
 choosing the version from the master branch. Edit `ingredients.md` so it looks
 like:
 ~~~
-* 1 tbsp coriander
 * 2 avocados
 * 1 lime
 * 1 tsp salt
 * 1/2 onion
+* 1 tbsp coriander
 ~~~
 
 now stage, commit and check the result:
