@@ -15,6 +15,9 @@ This course will cover:
 * Publishing your code using Github 
 * Using Git and Github to collaborate as part of a team 
 
+This course (particularly the first half) is closely based on this [Code
+Refinery lesson](https://coderefinery.github.io/git-intro/).
+
 > ## Prerequisites
 >
 > Any introductory (graduate school) level programming course
