@@ -338,8 +338,8 @@ $ git graph
 ~~~
 {: .commands}
 ~~~
-* d5fb141 (experiment) Added salt to balance coriander
-| * 7477632 (HEAD -> master) reduce salt
+* d5fb141 (HEAD -> experiment) Added salt to balance coriander
+| * 7477632 (master) reduce salt
 | *   567307e Merge branch 'experiment'
 | |\  
 | |/  
@@ -427,11 +427,11 @@ for Git to know which it should be so it has to ask you. Let's resolve it by
 choosing the version from the master branch. Edit `ingredients.md` so it looks
 like:
 ~~~
-* 1 tbsp coriander
 * 2 avocados
 * 1 lime
 * 1 tsp salt
 * 1/2 onion
+* 1 tbsp coriander
 ~~~
 
 now stage, commit and check the result:

@@ -20,7 +20,7 @@ keypoints:
 - A git repository is the record of the history of a project and can be created with git init
 - Git records changes to files as commits
 - Git must be explicitly told which changes to include as part of commit (known as staging changes) with git add [file]...
-- Staged changes can be stored in a commit with git add -m "commit message"
+- Staged changes can be stored in a commit with git commit -m "commit message"
 - You can check which files have been changed and/or staged with git status
 - You can see the full changes made to files with git diff for unstaged files and git diff --cached
 - The commit history of a repository can be checked with git log
