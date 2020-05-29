@@ -3,7 +3,7 @@ title: "Collaborating"
 teaching: 20
 exercises: 40
 questions:
-- "How can I make a contribution to other people repositories?"
+- "How can I make a contribution to other people's repositories?"
 - "How do I know what changes other people are making in my repo?"
 objectives:
 - "Explain what forks and pull requests (PR) are."
@@ -60,7 +60,7 @@ The image below shows that this repository has been forked 6 times already. To
 ## Pull requests
 
 - `pull requests` (or PRs, for short) are the GitHub method of contributing to
- other's people repositories and keep track of changes made to your own.
+ other people's repositories and keep track of changes made to your own.
 - As with `forks`, PRs are a GitHub concept. 
 - A `pull request` means: "Hey, I have some changes I would like to contribute
  to your repo. Please, have a look at them and `pull` them into your own."
