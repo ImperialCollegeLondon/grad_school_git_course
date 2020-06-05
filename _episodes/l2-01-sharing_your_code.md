@@ -43,8 +43,7 @@ There are several widely used repository hosting services using Git, such as
 
 - It is very easy to use and setup.
 - It is, arguably, the most used hosting service of them all.
-- Imperial has a Git Organisation account any Imperial staff or student can
-  join.
+- Imperial has a GitHub Organisation any Imperial staff or student can join.
 - You should have already created an account on GitHub according to the [setup
   instructions](../setup).
 
@@ -64,11 +63,11 @@ control the visibility of a repository.
 - The repository is not listed in the GitHub directory neither it is
   discoverable by Google and other search engines.
 - Ideal for testing, for projects with a view on commercialization, preliminary
-  work on future open projects or for school/Msc/PhD projects not meant ot be
+  work on future open projects or for school/Msc/PhD projects not meant to be
   public.
 - Free accounts (except if part of an Organisation account) have several
-  limitations on the features that a private repository has (eg. maximum 3
-  collaborators, no GitHub pages, etc.).
+  limitations on the features that a private repository has (eg. fewer
+  collaborative features, no GitHub pages, etc.).
 
 #### Public repositories
 
@@ -219,7 +218,7 @@ See [GitHub Help: Setting guidelines for repository contributors][contributors].
 >
 > - Go to **Insights** in the upper right corner of the repository.
 > - And then click on **Community** on the left hand side.
-> - The screen nows shows how the project compares with the recommended
+> - The screen now shows how the project compares with the recommended
 >   community standards. Is not bad, but could be better.
 > - Click on **Add** in the *Contributing* line. In the new screen you can
 >   write your contributing guidelines. **Tip**: *No one* writes this from
