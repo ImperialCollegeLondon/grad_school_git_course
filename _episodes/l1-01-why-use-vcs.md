@@ -123,11 +123,13 @@ become established as by far the most widely used. We focus on use of Git via
 its command line interface as we believe this is the best way to communicate the
 important fundamental concepts.
 
-Git is a very powerful tool. Unfortunately it is also quite difficult start
-using. Git often uses confusing and unintuitive terminology and benefits of its
-use are often only apparent in the longer term. Today we will make every effort
-to demystify Git and make clear why it's usage is an essential part of any
-programming activity.
+Git is a very powerful tool. Unfortunately it is also quite difficult to start
+using. Git often uses confusing and unintuitive terminology and the benefits of
+its use are often only apparent in the longer term. Today we will make every
+effort to demystify Git and make clear why it's usage is an essential part of
+any programming activity.
+
+<center><blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;It&#39;s called a merge commit, Marty! It&#39;s a directed acyclic graph! We need to bisect and revert, and then use interactive rebasing possibly with a cherry-pick. What aren&#39;t you getting about this!?&quot; <a href="https://t.co/zahjHhiB33">pic.twitter.com/zahjHhiB33</a></p>&mdash; Gabriel Lebec (@g_lebec) <a href="https://twitter.com/g_lebec/status/1312115110685540352?ref_src=twsrc%5Etfw">October 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
 
 These materials are written in the style of [The Carpentries][carpentries]. If
 attending an instance of this workshop you are fully encouraged to "type along"
