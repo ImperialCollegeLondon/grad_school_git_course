@@ -2,65 +2,22 @@
 title: Setup
 ---
 
-Completing this course requires you to have access to computer with some
-software prerequisites installed. If you are attending a delivery of this course
-in person through the Graduate School you have the option of using your own
-laptop or an ICT managed PC at the workshop venue. For instructions on setting
-up your own Laptop please see below. All attendees should download the zip file,
-join the Imperial Research Software Community Slack workspace and create a
-GitHub account before the workshop.
+Completing this course requires you to have access to a computer with Git
+installed. This course is currently being delivered remotely so please make sure
+you have access to a suitable computer. All attendees should download the zip
+file and, if not already available, install Git.
 
 ## Downloading the Zip File
 
-The zip file containing files that will be used in the session is available
+The zip archive containing files that will be used in the session is available
 [here](code/recipe.zip). Please download and **save it in your home directory,
 do not extract it yet**.
 
-## Joining The Imperial Research Software Community Slack Workspace
-
-[Slack](https://slack.com/intl/en-gb/) is a commonly used tool for teams and
-communities to keep in touch. The Research Software Community at Imperial has a
-dedicated Slack workspace for discussing issues related to research software.
-We will use this as an area to share links and information and for you to ask
-questions and request help. We hope that longer term you will find the Community
-a valuable asset in your work.
-
-* Please visit https://imperialsrscommunity.slack.com/ and select "create an
-  account".
-* Complete the sign-up steps (be sure to use your @imperial.ac.uk address).
-  There is no need to install the Slack Desktop app as the workspace can be
-  access through the browser.
-* Once you're logged into the workspace, press "Channels" in the left-hand pane.
-* In the search bar look for "grad-school-git-course" and select the entry
-  from the results.
-* Press "Join Channel" at the bottom of the page.
-
-## Creating a GitHub Account
-
-- Go to [https://github.com](https://github.com).
-- Fill the form with your details, you may wish to use your College email
-  address but this is not a requirement.
-- Select the Free plan.
-- Complete the questionnaire (Optional) or click on **Skip this step**.
-- You should receive an email shortly to verify your address. Click **Verify
-  email address** in that email.
-- Congratulations! Now you have a GitHub account!
-
-## Using Your Own Laptop
-
-The below instructions can be used to setup the required software for your own
-laptop. For ICT managed PC's setup steps will be covered during the
-workshop. Please note that due to time constraints we are unable to support you
-in setting up your laptop if you come to the workshop without the below
-prerequisites installed and working. In this case you will need to use one of
-the PC's provided.
-
-### Git
+## Install Git
 
 Please follow the relevant instructions depending on your operating system.
 
-#### Windows
-
+### Windows
 
 1. Download the Git for Windows [installer](https://git-for-windows.github.io/).
 1. Run the installer and follow the steps below:
@@ -88,7 +45,7 @@ output similar to the below:
 git version 2.23.0.windows-1
 ```
 
-#### MacOS
+### MacOS
 
 **For OS X 10.9 and higher**, install Git for Mac by downloading and running the
 most recent "mavericks" installer from [this list][installer-list]. Because this
@@ -109,7 +66,7 @@ output similar to the below:
 git version 2.25.0
 ```
 
-#### Linux
+### Linux
 
 If Git is not already available on your machine you can try to install it via
 your distributions package manager. For Debian/Ubuntu run `sudo apt-get install
