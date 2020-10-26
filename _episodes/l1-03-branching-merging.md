@@ -184,7 +184,7 @@ test this let's add 2 tbsp coriander to `ingredients.md`. Stage this and commit
 it with the message "try with some coriander".
 
 ~~~
-$ git add ingredients.txt
+$ git add ingredients.md
 $ git commit -m "try with some coriander"
 $ git graph
 ~~~
