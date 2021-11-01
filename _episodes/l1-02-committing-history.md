@@ -325,7 +325,7 @@ but in the alphanumeric sequence (hash) at the start of each commit.
 * If the first characters of the hash are unique it is not necessary to type the
   entire hash.
 * Output is in reverse chronological order, i.e. newest commits on top.
-* Notice the label HEAD at the top, this indicates the indicates the commit that
+* Notice the label HEAD at the top, this indicates the commit that
   the current working directory is based on.
 
 > ## Exercise: Recalling the changes for a commit
@@ -333,13 +333,13 @@ but in the alphanumeric sequence (hash) at the start of each commit.
 > The command `git log` shows us the metadata for a commit but to see the
 > file changes recorded in a commit you can use `git show`:
 > ```shell
-> $ git show [commit hash]
+> $ git show [commit-hash]
 > ```
 >
 > Use one of the commit hashes from your Git history. To see the contents from
 > when the commit was made try:
 > ```shell
-> $ git show [commit hash]:ingredients.md
+> $ git show [commit-hash]:ingredients.md
 > ```
 {: .challenge}
 
@@ -419,7 +419,7 @@ realise that it was misguided and should not have been included. For instance,
 it's a bit of cliche to tell people to "enjoy" at the end of a recipe, so lets
 get rid of it with:
 ~~~
-$ git revert --no-edit COMMIT_HASH
+$ git revert --no-edit [commit-hash]
 ~~~
 {: .commands}
 ~~~
