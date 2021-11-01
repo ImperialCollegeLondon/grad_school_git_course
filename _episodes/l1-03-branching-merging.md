@@ -35,7 +35,7 @@ other:
 repository"){:class="img-responsive"}
 
 * Commits are depicted here as little boxes with abbreviated hashes.
-* Here the branch `master` points to a commit.
+* Here the branch `main` points to a commit.
 * "HEAD" is the current position (remember the recording head of tape
   recorders?).
 * When we talk about branches, we often mean all parent commits, not only the
@@ -64,8 +64,8 @@ version that contains all changes:
 of commit history wit multiple branches and merges"){:class="img-responsive"}
 
 * We see branching points and merging points.
-* Main line development is often called `master`.
-* Other than this convention there is nothing special about `master`, it is just
+* Main line development is often called `main`.
+* Other than this convention there is nothing special about `main`, it is just
   a branch.
 * Commits form a directed acyclic graph (arrows point from parent commits to
   child commits).
@@ -88,12 +88,12 @@ $ git branch
 ~~~
 {: .commands}
 ~~~
-* master
+* main
 ~~~
 {: .output}
 
 * This command shows where we are, it does not create a branch.
-* There is only `master` and we are on `master` (star represents the `HEAD`).
+* There is only `main` and we are on `main` (star represents the `HEAD`).
 
 In the following we will learn how to create branches, how to switch between
 them and how to merge changes from different branches.
@@ -120,15 +120,15 @@ $ git graph
 ~~~
 {: .commands}
 ~~~
-* ddef60e (HEAD -> master) Revert "Added instruction to enjoy"
+* ddef60e (HEAD -> main) Revert "Added instruction to enjoy"
 * 8bfd0ff Added 1/2 onion to ingredients
 * 2bf7ece Added instruction to enjoy
 * ae3255a Adding ingredients and instructions
 ~~~
 {: .output}
 
-We have four commits and you can see that we are working on the master branch
-from `HEAD -> master` next to the most recent commit. This can be represented
+We have four commits and you can see that we are working on the main branch
+from `HEAD -> main` next to the most recent commit. This can be represented
 diagrammatically:
 
 ![Git collaborative]({{ site.baseurl }}/fig/branch1.png
@@ -143,7 +143,7 @@ $ git graph
 ~~~
 {: .commands}
 ~~~
-* ddef60e (HEAD -> master, experiment) Revert "Added instruction to enjoy"
+* ddef60e (HEAD -> main, experiment) Revert "Added instruction to enjoy"
 * 8bfd0ff Added 1/2 onion to ingredients
 * 2bf7ece Added instruction to enjoy
 * ae3255a Adding ingredients and instructions
@@ -151,7 +151,7 @@ $ git graph
 {: .output}
 
 Notice that the name of our new branch has appeared next to latest commit. HEAD
-is still pointing master however denoting that we have created a new branch but
+is still pointing main however denoting that we have created a new branch but
 we're not using it yet. This looks like:
 
 ![Git collaborative]({{ site.baseurl }}/fig/branch2.png
@@ -164,7 +164,7 @@ $ git graph
 ~~~
 {: .commands}
 ~~~
-* ddef60e (HEAD -> experiment, master) Revert "Added instruction to enjoy"
+* ddef60e (HEAD -> experiment, main) Revert "Added instruction to enjoy"
 * 8bfd0ff Added 1/2 onion to ingredients
 * 2bf7ece Added instruction to enjoy
 * ae3255a Adding ingredients and instructions
@@ -191,7 +191,7 @@ $ git graph
 {: .commands}
 ~~~
 * 96fe069 (HEAD -> experiment) try with some coriander
-* ddef60e (master) Revert "Added instruction to enjoy"
+* ddef60e (main) Revert "Added instruction to enjoy"
 * 8bfd0ff Added 1/2 onion to ingredients
 * 2bf7ece Added instruction to enjoy
 * ae3255a Adding ingredients and instructions
@@ -202,7 +202,7 @@ $ git graph
 ![Git collaborative]({{ site.baseurl }}/fig/branch4.png
 "Repository with one commit on experiment branch"){:class="img-responsive"}
 
-Note that the master branch is unchanged whilst a new commit (labelled `e1`) has
+Note that the main branch is unchanged whilst a new commit (labelled `e1`) has
 been created as part of the experiment branch. 
 
 As mentioned previously, one of the advantages of using branches is working on
@@ -211,10 +211,10 @@ different features in parallel. You may have already spotted the typo in
 our work on the `experiment` branch. We could correct the typo with a new commit
 in `experiment` but it doesn't fit in very well here - if we decide to discard
 our experiment then we also lose the correction. Instead it makes much more
-sense to create a correcting commit in `master`:
+sense to create a correcting commit in `main`:
 
 ~~~
-$ git checkout master
+$ git checkout main
 $ # make change to ingredients.md
 $ git add ingredients.md
 $ git commit -m "Corrected typo in ingredients.md"
@@ -222,7 +222,7 @@ $ git graph
 ~~~
 {: .commands}
 ~~~
-* d4ca89f (HEAD -> master) Corrected typo in ingredients.md
+* d4ca89f (HEAD -> main) Corrected typo in ingredients.md
 | * 96fe069 (experiment) try with some coriander
 |/  
 * ddef60e Revert "Added instruction to enjoy"
@@ -232,12 +232,12 @@ $ git graph
 ~~~
 {: .output}
 ![Git collaborative]({{ site.baseurl }}/fig/branch5.png
-"Repository with one commit on master and experiment branches"){:class="img-responsive"}
+"Repository with one commit on main and experiment branches"){:class="img-responsive"}
 
 ## Merging
 
 Now that we have our two separate tracks of work they need to be combined back
-together. We should already have the `master` branch checked out (double check
+together. We should already have the `main` branch checked out (double check
 with `git branch`). The below command can then be used to perform the merge.
 ~~~
 $ git merge --no-edit experiment
@@ -256,7 +256,7 @@ $ git graph
 ~~~
 {: .commands}
 ~~~
-*   40070a5 (HEAD -> master) Merge branch 'experiment'
+*   40070a5 (HEAD -> main) Merge branch 'experiment'
 |\
 | * 96fe069 (experiment) try with some coriander
 * | d4ca89f Corrected typo in ingredients.md
@@ -283,7 +283,7 @@ repository.
 > 
 > As the experiment branch is still present there is no reason further commits
 > can't be added to it. Create a new commit in the `experiment` branch adjusting
-> the amount of coriander in the recipe. Then merge `experiment` into `master`.
+> the amount of coriander in the recipe. Then merge `experiment` into `main`.
 > You should end up with a repository history matching: ![Git
 > collaborative]({{ site.baseurl }}/fig/branch7.png "Repository with second
 > merge"){:class="img-responsive"}
@@ -295,13 +295,13 @@ repository.
 > > $ # make changes to ingredients.md
 > > $ git add ingredients.md
 > > $ git commit -m "Reduced the amount of coriander"
-> > $ git checkout master
+> > $ git checkout main
 > > $ git merge --no-edit experiment
 > > $ git graph
 > > ~~~
 > > {: .commands}
 > > ~~~
-> > *   567307e (HEAD -> master) Merge branch 'experiment'
+> > *   567307e (HEAD -> main) Merge branch 'experiment'
 > > |\
 > > | * 9a4b298 (experiment) Reduced the amount of coriander
 > > * |   40070a5 Merge branch 'experiment'
@@ -326,7 +326,7 @@ where incompatible sets of changes need to be combined. In this case it is up to
 you to decide what should be kept and what should be discarded. First lets set
 up a conflict:
 ~~~
-$ git checkout master
+$ git checkout main
 $ # change line to 1 tsp salt in ingredients.md
 $ git add ingredients.md
 $ git commit -m "Reduce salt"
@@ -339,7 +339,7 @@ $ git graph
 {: .commands}
 ~~~
 * d5fb141 (HEAD -> experiment) Added salt to balance coriander
-| * 7477632 (master) reduce salt
+| * 7477632 (main) reduce salt
 | *   567307e Merge branch 'experiment'
 | |\  
 | |/  
@@ -362,9 +362,9 @@ $ git graph
 ![Git collaborative]({{ site.baseurl }}/fig/branch8.png
 "Repository with merge conflict"){:class="img-responsive"}
 
-Now we try and merge `experiment` into `master`:
+Now we try and merge `experiment` into `main`:
 ~~~
-$ git checkout master
+$ git checkout main
 $ git merge --no-edit experiment 
 ~~~
 {: .commands}
@@ -377,13 +377,13 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 As suspected we are warned that the merge failed. This puts Git into a special
 state in which the merge is in progress but has not been finalised by creating a
-new commit in master. Fortunately `git status` is quite useful here:
+new commit in main. Fortunately `git status` is quite useful here:
 ~~~
 $ git status
 ~~~
 {: .commands}
 ~~~
-On branch master
+On branch main
 You have unmerged paths.
   (fix conflicts and run "git commit")
   (use "git merge --abort" to abort the merge)
@@ -420,11 +420,11 @@ location of the conflict. This may be confusing at first glance (a good editor
 may add some highlighting which can help), but you are essentially being asked
 to choose between the two versions presented. The tags `<<<<<<< HEAD` and
 `>>>>>>> experiment` are used to indicate which branch each version came from
-(HEAD here corresponds to `master` as that is our checked out branch). 
+(HEAD here corresponds to `main` as that is our checked out branch). 
 
 The conflict makes sense, we can either have 1 tsp of salt or 3. There is no way
 for Git to know which it should be so it has to ask you. Let's resolve it by
-choosing the version from the master branch. Edit `ingredients.md` so it looks
+choosing the version from the main branch. Edit `ingredients.md` so it looks
 like:
 ~~~
 * 2 avocados
@@ -437,12 +437,12 @@ like:
 now stage, commit and check the result:
 ~~~
 $ git add ingredients.md
-$ git commit -m "Merged experiment into master"
+$ git commit -m "Merged experiment into main"
 $ git graph
 ~~~
 {: .commands}
 ~~~
-*   e361d2b (HEAD -> master) Merged experiment into master
+*   e361d2b (HEAD -> main) Merged experiment into main
 |\  
 | * d5fb141 (experiment) Added salt to balance coriander
 * | 7477632 reduce salt
@@ -498,8 +498,8 @@ $ git checkout -b new-feature  # create branch, switch to it
 $ git commit                   # work, work, work, ...
                                # test
                                # feature is ready
-$ git checkout master          # switch to master
-$ git merge new-feature        # merge work to master
+$ git checkout main            # switch to main
+$ git merge new-feature        # merge work to main
 $ git branch -d new-feature    # remove branch
 ```
 

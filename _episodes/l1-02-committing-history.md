@@ -119,6 +119,32 @@ Initialized empty Git repository in /home/username/recipe/.git/
 
 The path you see in the output will vary depending on your operating system.
 
+## `master` and `main` branches 
+> Traditionally, the default branch name whenever you `init` a repository was `master`.
+> However, the sensitivity of the online community has shifted lately and some tools,
+> like GitHub, use now `main` as the default name instead. You can read the rationale
+> in [this link](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main).
+> 
+> If you are using `git` verison 2.28 or higher (you can find the version you are
+> using with `git --version`) you can change the default branch name for all new
+> repositories with:
+> 
+> ~~~
+> $ git config --global init.defaultBranch main
+> ~~~
+> {: .commands}
+>
+> For existing repositories or if your git version is lower tha 2.28, you can create the
+> `master` branch normally and then re-name it with:
+>
+> ~~~
+> $ git branch -m master main   
+> ~~~
+> {: .commands}
+> 
+> We will use `main` as the default branch name throught the workshop. 
+{: .callout}
+
 ## Creating The First Snapshot
 
 Before we do anything else run the below:
@@ -127,7 +153,7 @@ $ git status
 ~~~
 {: .commands}
 ~~~
-On branch master
+On branch main
 
 No commits yet
 
@@ -158,7 +184,7 @@ $ git status
 {: .commands}
 
 ~~~
-On branch master
+On branch main
 
 No commits yet
 
@@ -179,7 +205,7 @@ Let us now commit the change to the repository:
 ~~~
 $ git commit -m "adding ingredients and instructions"
 
-[master (root-commit) aa243ea] adding ingredients and instructions
+[main (root-commit) aa243ea] adding ingredients and instructions
  2 files changed, 8 insertions(+)
  create mode 100644 ingredients.md
  create mode 100644 instructions.md
@@ -197,7 +223,7 @@ $ git status
 ~~~
 {: .commands}
 ~~~
-On branch master
+On branch main
 nothing to commit, working tree clean
 ~~~
 {: .output}
@@ -212,7 +238,7 @@ $ git log
 ~~~
 {: .commands}
 ~~~
-commit b7cd5f6ff57968a7782ff8e74cc9921cc7463c30 (HEAD -> master)
+commit b7cd5f6ff57968a7782ff8e74cc9921cc7463c30 (HEAD -> main)
 Author: Christopher Cave-Ayland <c.cave-ayland@imperial.ac.uk>
 Date:   Mon Dec 30 12:51:04 2019 +0000
 
@@ -295,7 +321,7 @@ $ git log
 {: .commands}
 
 ~~~
-commit b6ff1ca61f08241ec741f6fc58ab2a443a253d89 (HEAD -> master)
+commit b6ff1ca61f08241ec741f6fc58ab2a443a253d89 (HEAD -> main)
 Author: Christopher Cave-Ayland <c.cave-ayland@imperial.ac.uk>
 Date:   Tue Dec 31 12:32:04 2019 +0000
 
@@ -364,7 +390,7 @@ $ git log
 ~~~
 {: .commands}
 ~~~
-commit 2bf7ece2f57594873678f9c17832010730970b28 (HEAD -> master)
+commit 2bf7ece2f57594873678f9c17832010730970b28 (HEAD -> main)
 Author: Christopher Cave-Ayland <c.cave-ayland@imperial.ac.uk>
 Date:   Tue Dec 31 12:28:19 2019 +0000
 
@@ -384,7 +410,7 @@ $ git status
 ~~~
 {: .commands}
 ~~~
-On branch master
+On branch main
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   ingredients.md
@@ -423,7 +449,7 @@ $ git revert --no-edit COMMIT_HASH
 ~~~
 {: .commands}
 ~~~
-[master a70e1c5] Revert "Added instruction to enjoy"
+[main a70e1c5] Revert "Added instruction to enjoy"
  Date: Tue Dec 31 12:37:47 2019 +0000
  1 file changed, 1 deletion(-)
 ~~~
@@ -438,7 +464,7 @@ $ git log
 ~~~
 {: .commands}
 ~~~
-commit ddef60e05eae3cc73ea5be3f98df6ae372e43750 (HEAD -> master)
+commit ddef60e05eae3cc73ea5be3f98df6ae372e43750 (HEAD -> main)
 Author: Christopher Cave-Ayland <c.cave-ayland@imperial.ac.uk>
 Date:   Tue Dec 31 14:55:52 2019 +0000
 
