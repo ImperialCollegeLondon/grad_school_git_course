@@ -160,7 +160,7 @@ $ git status
 ~~~
 On branch master
 
-Initial commit
+No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
