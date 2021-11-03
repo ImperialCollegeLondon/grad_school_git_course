@@ -1,0 +1,302 @@
+\documentclass{article}
+
+\usepackage{subcaption}
+\usepackage{gitdags}
+\usetikzlibrary{arrows,positioning}
+%% \usegdlibrary{trees}
+\tikzgraphsset{%
+  nudge/.style={/tikz/shift={#1}},
+  nudge down1/.style={nudge=(270:#1)},
+  nudge down1/.default=1.1,
+  nudge down2/.style={nudge=(270:#1)},
+  nudge down2/.default=2.1
+}
+\begin{document}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \tikzstyle{node}=[align=center, font=\large, draw, rounded corners]
+    %% \tikzstyle{command}=[node, fill=blue!50]
+    \tikzstyle{command}=[node, fill=solarized-blue!30]
+    \tikzstyle{area}=[node, fill=solarized-green!30]
+    \tikzstyle{label}=[midway, align=center, solarized-blue]
+    \tikzstyle{smalllabel}=[label, black, font=\footnotesize]
+    \tikzstyle{arrow}=[->, >=stealth, thick]
+
+    \node[area] (wd) at (0, 0) {Working \\Directory};
+    \node[area, right = 6em of wd] (sa) {Staging \\Area};
+    \node[area, right = 6em of sa] (r) {Repository};
+
+    \draw[arrow] (wd) -- (sa)
+    node[above, label] (add) {git add}
+    node[below, smalllabel] {copies files to};
+    \draw[arrow] (sa) -- (r)
+    node[above, label] {git commit}
+    node[below, smalllabel] (moves) {moves files to};
+
+    \node[command, above = 6em of add] (status) {git status};
+    \draw[arrow] (status) -- (wd)
+    node[above, sloped, smalllabel] {shows whats in};
+    \draw[arrow] (status) -- (sa)
+    node[above, sloped, smalllabel] {shows whats in};
+
+    \node[node, above = 4em of r] (history) {Commit \\History};
+    \draw[arrow] (r) -- (history)
+    node[smalllabel, right] {contains};
+
+    \node[command, left = 4em of history] (log) {git log};
+    \draw[arrow] (log) -- (history)
+    node[smalllabel, above] {shows};
+
+    \node[command, below right= 3em and -4em of moves] (init) {git init};
+    \draw[arrow] (init) -- (sa)
+    node[smalllabel, below, sloped] {creates};
+    \draw[arrow] (init) -- (r)
+    node[smalllabel, below, sloped] {creates};
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+      % Commit DAG
+      \gitDAG[grow right sep = 2em]{
+        A -- B -- { 
+          C,
+          D -- E,
+        }
+      };
+      % Tag reference
+      \gittag
+        [v0p1]       % node name
+        {v0.1}       % node text
+        {above=of A} % node placement
+        {A}          % target
+      % Remote branch
+      \gitremotebranch
+        [origmain]    % node name
+        {origin/main} % node text
+        {above=of C}    % node placement
+        {C}             % target
+      % Branch
+      \gitbranch
+        {main}     % node name and text 
+        {above=of E} % node placement
+        {E}          % target
+      % HEAD reference
+      \gitHEAD
+        {above=of main} % node placement
+        {main}          % target
+    \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em]{
+      m1 -- m2 -- m3
+    };
+    \gitbranch {main} {above=of m3} {m3}
+    \gitHEAD {above=of main} {main}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch up = 3em] {
+      m1 -- m2 -- {m3 -- {m4, {[nudge down2] c1 -- c2}} -- m5, {[nudge down1]b1 -- b2 -- b3}} -- m6
+    };
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch up = 3em] {
+      m1 -- m2 -- {m3 -- {m4, {[nudge down2] c1 -- c2}} -- m5, {[nudge down1]b1 -- b2 -- b3}} -- m6
+    };
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch up = 3em] {
+      m1 -- m2 -- m3 -- m4
+    };
+    \gitbranch {main} {above=of m4} {m4}
+    \gitHEAD {above=of main} {main}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch up = 3em] {
+      m1 -- m2 -- m3 -- m4
+    };
+    \gitbranch {main} {above=of m4} {m4}
+    \gitbranch {experiment} {below=of m4} {m4}
+    \gitHEAD {above=of main} {main}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch up = 3em] {
+      m1 -- m2 -- m3 -- m4
+    };
+    \gitbranch {main} {above=of m4} {m4}
+    \gitbranch {experiment} {below=of m4} {m4}
+    \gitHEAD {below=of experiment} {experiment}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch up = 3em] {
+      m1 -- m2 -- m3 -- m4
+    };
+    \gitbranch {main} {above=of m4} {m4}
+    \gitbranch {experiment} {below=of m4} {m4}
+    \gitHEAD {right=of m4} {m4}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch up = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {[nudge down1] e1,}
+    };
+    \gitbranch {main} {above=of m4} {m4}
+    \gitbranch {experiment} {below=of e1} {e1}
+    \gitHEAD {below=of experiment} {experiment}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch up = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {[nudge down1] e1}
+    };
+    \gitbranch {main} {above=of m4} {m4}
+    \gitbranch {experiment} {below=of e1} {e1}
+    \gitHEAD {above=of main} {main}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3 em] {
+      m1 -- m2 -- m3 -- m4 -- {m5, e1}
+    };
+    \gitbranch {main} {above=of m5} {m5}
+    \gitbranch {experiment} {below=of e1} {e1}
+    \gitHEAD {above=of main} {main}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {m5, e1}
+    };
+    \gitbranch {main} {above=of m5} {m5}
+    \gitbranch {experiment} {below=of e1} {e1}
+    \gitHEAD {above=of main} {main}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {m5, e1} -- m6
+    };
+    \gitbranch {main} {above=of m6} {m6}
+    \gitbranch {experiment} {below=of e1} {e1}
+    \gitHEAD {above=of main} {main}
+    \node[DAGcommit, fill = solarized-blue!20] at (m6) {m6};
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {m5, e1} -- m6
+    };
+    \gitbranch {main} {above=of m6} {m6}
+    \gitbranch {experiment} {below=of e1} {e1}
+    \gitHEAD {below=of experiment} {experiment}
+    \node[DAGcommit, fill = solarized-blue!20] at (m6) {m6};
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {m5 -- m6, e1 -- e2}
+    };
+    \gitbranch {main} {above=of m6} {m6}
+    \gitbranch {experiment} {below=of e2} {e2}
+    \gitHEAD {below=of experiment} {experiment}
+    \draw[DAGedge] (e1) -- (m6);
+    \node[DAGcommit, fill = solarized-blue!20] at (m6) {m6};
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {m5 -- m6, e1 -- e2}
+    };
+    \gitbranch {main} {above=of m6} {m6}
+    \gitbranch {experiment} {below=of e2} {e2}
+    \gitHEAD {above=of main} {main}
+    \draw[DAGedge] (e1) -- (m6);
+    \node[DAGcommit, fill = solarized-blue!20] at (m6) {m6};
+  \end{tikzpicture}
+\end{figure}
+
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {m5 -- m6, e1 -- e2} -- m7
+    };
+    \gitbranch {main} {above=of m7} {m7}
+    \gitbranch {experiment} {below=of e2} {e2}
+    \gitHEAD {above=of main} {main}
+    \draw[DAGedge] (e1) -- (m6);
+    \node[DAGcommit, fill = solarized-blue!20] at (m6) {m6};
+    \node[DAGcommit, fill = solarized-blue!20] at (m7) {m7};
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {m5 -- m6 -- m7 -- m8, e1 -- e2 -- e3}
+    };
+    \gitbranch {main} {above=of m8} {m8}
+    \gitbranch {experiment} {below=of e3} {e3}
+    \gitHEAD {below=of experiment} {experiment}
+    \draw[DAGedge] (e1) -- (m6);
+    \draw[DAGedge] (e2) -- (m7);
+    \node[DAGcommit, fill = solarized-blue!20] at (m6) {m6};
+    \node[DAGcommit, fill = solarized-blue!20] at (m7) {m7};
+  \end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+  \begin{tikzpicture}
+    \gitDAG[grow right sep = 2em, branch down = 3em] {
+      m1 -- m2 -- m3 -- m4 -- {m5 -- m6 -- m7 -- m8, e1 -- e2 -- e3} -- m9
+    };
+    \gitbranch {main} {above=of m9} {m9}
+    \gitbranch {experiment} {below=of e3} {e3}
+    \gitHEAD {above=of main} {main}
+    \draw[DAGedge] (e1) -- (m6);
+    \draw[DAGedge] (e2) -- (m7);
+    \node[DAGcommit, fill = solarized-blue!20] at (m6) {m6};
+    \node[DAGcommit, fill = solarized-blue!20] at (m7) {m7};
+    \node[DAGcommit, fill = solarized-blue!20] at (m9) {m9};
+  \end{tikzpicture}
+\end{figure}
+
+\end{document}
