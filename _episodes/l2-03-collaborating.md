@@ -180,7 +180,7 @@ through GitHub. A typical workflow might look like this:
 * You make the changes to the code, creating several commits in the process
 * You push the new commits in the `issue_fix` branch to your remote copy of the
   project with `git push -u origin issue_fix`
-* On GitHub you create a `Pull Request` merging your new branch into master of the
+* On GitHub you create a `Pull Request` merging your new branch into main of the
   original project.
 * The project owner reviews your Pull Request and asks for some changes.
 * You make the changes in your local copy of the `issue_fix` branch and use `git

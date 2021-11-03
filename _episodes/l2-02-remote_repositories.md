@@ -64,13 +64,13 @@ local one out of it or the other way around, the steps are different.
 >
 >```bash
 >$ git remote add origin [address of your remote repo (should end in .git)]
->$ git push -u origin master
+>$ git push -u origin main
 ># you will be asked to provide your GitHub username and password
 >```
 >- The first line will set the GitHub repository as the remote for your
 > local one, calling it `origin`.
->- The second line will push your master branch to a remote one called
->  `origin/master`, setting it as its upstream branch.
+>- The second line will push your main branch to a remote one called
+>  `origin/main`, setting it as its upstream branch.
 > - You can check if things went well by going to GitHub: the repository there
 >   should contain all the files of your local repository.
 {: .challenge}
@@ -93,12 +93,12 @@ local one out of it or the other way around, the steps are different.
 > - This will download the remote repository to a new `example` directory, in
 >   full, with all the information on the branches available in `origin` and all
 >   the git history.
-> - By default, a local `master` branch will be created tracking the
->   `origin/master` branch.
+> - By default, a local `main` branch will be created tracking the
+>   `origin/main` branch.
 > - You can find some information on the repository using the commands already
 >   discussed in Lesson 1, like `git log` or `git branch -vv`, which should show
 >   that there is indeed just
->   one branch, `master` tracking `origin/master`)
+>   one branch, `main` tracking `origin/main`)
 > ![Git collaborative]({{ site.baseurl }}/fig/clone.png "Effect of cloning a remote repository."){:class="img-responsive"}
 {: .challenge}
 
@@ -111,7 +111,7 @@ local one out of it or the other way around, the steps are different.
 ![Git collaborative]({{ site.baseurl }}/fig/push.png "Push a branch
 ."){:class="img-responsive"}
 - If the current branch has no upstream yet, you can configure one by doing 
-`$ git push -u origin [branch_name]`, as done with `master` in the exercise
+`$ git push -u origin [branch_name]`, as done with `main` in the exercise
  above.
 ![Git collaborative]({{ site.baseurl }}/fig/push_u.png "Push a branch without
  upstream yet."){:class="img-responsive"}
