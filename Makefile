@@ -121,6 +121,10 @@ handout-lesson%:
 ## handouts         : convenience rule to build both handouts
 handouts: handout-lesson1 handout-lesson2
 
+## git-figures      : build latex based figures for git
+git-figures:
+	docker run --rm -u $(id -u):$(id -g) --workdir /mnt -it -v ${PWD}/fig/build:/mnt/ adnrv/texlive:latest pdflatex -interaction=nonstopmode git_figures.tex
+
 #-------------------------------------------------------------------------------
 # Include extra commands if available.
 #-------------------------------------------------------------------------------
