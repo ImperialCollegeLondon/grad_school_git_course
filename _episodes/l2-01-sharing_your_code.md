@@ -43,9 +43,30 @@ There are several widely used repository hosting services using Git, such as
 
 - It is very easy to use and setup.
 - It is, arguably, the most used hosting service of them all.
-- Imperial has a GitHub Organisation any Imperial staff or student can join.
-- You should have already created an account on GitHub according to the [setup
-  instructions](../setup).
+- Imperial has a GitHub Organisation any Imperial staff or student can join. You don't
+  need to join for this course but instructions to do so can be found [here][ic-github].
+
+[ic-github]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/research-support-systems/github/working-with-githubcom/
+
+### Set up your GitHub account
+
+Set up your free github account:
+
+1. Go to [www.github.com/join](https:www.github.com/join)
+2. Enter your details and click "Create an account". You can use your Imperial e-mail address,
+   but this is not mandatory.
+3. Choose the Free plan.
+4. Check your e-mail and click "Verify email address".
+5. You can fill out the questionnaire or click "skip this step".
+
+Create a Personal Access Token (PAT):
+
+1. In order to access GitHub from the command line, you will need a PAT.
+2. Follow the instructions [here][pat-instructions] to generate one. Ensure that "repo" is ticked.
+3. Keep the PAT safe, once you nagivate away from the page you won't be able to view it again.
+   If you lose it, you can always regenerate it.
+
+[pat-instructions]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token
 
 ### Private vs public repositories
 
