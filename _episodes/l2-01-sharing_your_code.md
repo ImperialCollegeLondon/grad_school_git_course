@@ -52,7 +52,7 @@ There are several widely used repository hosting services using Git, such as
 
 Set up your free github account:
 
-1. Go to [www.github.com/join](https:www.github.com/join)
+1. Go to [www.github.com/join](https:www.github.com/join).
 2. Enter your details and click "Create an account". You can use your Imperial e-mail address,
    but this is not mandatory.
 3. Choose the Free plan.

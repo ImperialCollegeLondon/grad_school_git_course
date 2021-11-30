@@ -65,7 +65,7 @@ local one out of it or the other way around, the steps are different.
 >
 >```bash
 >$ git remote add origin [address of your remote repo] 
-># The address start with https:// and end in .git 
+># The address should start with https:// and end in .git 
 >$ git push -u origin main
 ># You will be asked to provide your GitHub username and password.
 ># Enter your personal access token (PAT) as your password. 
