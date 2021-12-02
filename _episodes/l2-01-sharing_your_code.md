@@ -66,7 +66,10 @@ Create a Personal Access Token (PAT):
 3. Keep the PAT safe, once you nagivate away from the page you won't be able to view it again.
    If you lose it, you can always regenerate it.
 
+If you're familiar with SSH keys, you can follow [these instructions][ssh-instructions] to use that alternative authentication method.
+
 [pat-instructions]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token
+[ssh-instructions]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
 ### Private vs public repositories
 
