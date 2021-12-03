@@ -119,7 +119,7 @@ Initialized empty Git repository in /home/username/recipe/.git/
 
 The path you see in the output will vary depending on your operating system.
 
-## `master` and `main` branches 
+> ## `master` and `main` branches 
 > Traditionally, the default branch name whenever you `init` a repository was `master`.
 > However, the sensitivity of the online community has shifted lately and some tools,
 > like GitHub, use now `main` as the default name instead. You can read the rationale
@@ -353,6 +353,27 @@ but in the alphanumeric sequence (hash) at the start of each commit.
 * Output is in reverse chronological order, i.e. newest commits on top.
 * Notice the label HEAD at the top, this indicates the commit that
   the current working directory is based on.
+
+> ## What is a commit hash? 
+> A commit hash is a string that uniquely identifies a specific commit. They are
+> the really long list of numbers and letters that you can see in the output above after
+> the word `commit`. For example, `ae3255af37e82a98c57f16a057acd1ad5a15ff28` for the
+> last entry. 
+> 
+> Ocasionally, you will need to refer to a specific commit using the hash. Normally, you
+> can use just the first 5 or 6 elements of the hash (eg. for the hash above it will be
+> enough to use `ae3255a`) as it is very unlikely that there will be two commit hashes
+> with identical starting elements.
+> 
+> Throughout this course, we will indicate that you need to use the hash with
+> `[commit-hash]`. On those occasions, replace the whole string (including the square
+> brackets!) by the hash id. For example, if you need to use `git show` (see example
+> below) with the above commit hash, you will run:
+>
+> ```shell
+> $ git show ae3255a
+> ```
+{: .callout}
 
 > ## Exercise: Recalling the changes for a commit
 >
