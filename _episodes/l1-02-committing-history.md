@@ -35,7 +35,7 @@ workshop and have Git installed. Launch a command line environment (in Windows
 launch "Git Bash" from the Start Menu, on Linux or Mac start a new Terminal). We
 will use this command line interface throughout these materials. We focus on
 teaching Git with the command line as we believe this is the most thorough and
-portable way to communicate the underlying concepts. 
+portable way to communicate the underlying concepts.
 
 You can use the command line to interact with Git but there is still some extra
 information you must provide before it is ready to use. Enter the below commands
@@ -54,7 +54,7 @@ any projects on which you might work on this computer. Therefore you only need
 to perform the above commands once for each new computer Git is installed on.
 
 > ## The Command Line Interface
-> 
+>
 > For users not generally familiar with using command line interfaces its worth
 > taking a moment to consider the commands that were just run. To understand
 > what we just did lets break down the first command:
@@ -79,7 +79,7 @@ to perform the above commands once for each new computer Git is installed on.
 
 Now that Git is ready to use lets see how to start using it with a new
 project. In Git terminology a project is called a repository (frequently
-shortened to repo). 
+shortened to repo).
 
 For this workshop you were provided with a [zip file](../code/recipe.zip). If
 you have not already, please download it and **place it in your home
@@ -119,16 +119,16 @@ Initialized empty Git repository in /home/username/recipe/.git/
 
 The path you see in the output will vary depending on your operating system.
 
-## `master` and `main` branches 
+> ## `master` and `main` branches
 > Traditionally, the default branch name whenever you `init` a repository was `master`.
 > However, the sensitivity of the online community has shifted lately and some tools,
 > like GitHub, use now `main` as the default name instead. You can read the rationale
 > in [this link](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main).
-> 
+>
 > If you are using `git` verison 2.28 or higher (you can find the version you are
 > using with `git --version`) you can change the default branch name for all new
 > repositories with:
-> 
+>
 > ~~~
 > $ git config --global init.defaultBranch main
 > ~~~
@@ -138,7 +138,7 @@ The path you see in the output will vary depending on your operating system.
 > `master` branch normally and then re-name it with:
 >
 > ~~~
-> $ git branch -m master main   
+> $ git branch -m master main
 > ~~~
 > {: .commands}
 > 
@@ -368,6 +368,27 @@ but in the alphanumeric sequence (hash) at the start of each commit.
 * Notice the label HEAD at the top, this indicates the commit that
   the current working directory is based on.
 
+> ## What is a commit hash?
+> A commit hash is a string that uniquely identifies a specific commit. They are
+> the really long list of numbers and letters that you can see in the output above after
+> the word `commit`. For example, `ae3255af37e82a98c57f16a057acd1ad5a15ff28` for the
+> last entry.
+>
+> Ocasionally, you will need to refer to a specific commit using the hash. Normally, you
+> can use just the first 5 or 6 elements of the hash (eg. for the hash above it will be
+> enough to use `ae3255a`) as it is very unlikely that there will be two commit hashes
+> with identical starting elements.
+>
+> Throughout this course, we will indicate that you need to use the hash with
+> `[commit-hash]`. On those occasions, replace the whole string (including the square
+> brackets!) with the hash id. For example, if you need to use `git show` (see example
+> below) with the above commit hash, you will run:
+>
+> ```shell
+> $ git show ae3255a
+> ```
+{: .callout}
+
 > ## Exercise: Recalling the changes for a commit
 >
 > The command `git log` shows us the metadata for a commit but to see the
@@ -483,7 +504,7 @@ Author: Christopher Cave-Ayland <c.cave-ayland@imperial.ac.uk>
 Date:   Tue Dec 31 14:55:52 2019 +0000
 
     Revert "Added instruction to enjoy"
-    
+
     This reverts commit 2bf7ece2f57594873678f9c17832010730970b28.
 
 ...
