@@ -42,7 +42,7 @@ should be able to launch Git Bash from the Start Menu. Within the window that
 launches enter the command `git --version` and press enter. You should see
 output similar to the below:
 ```
-git version 2.23.0.windows-1
+git version 2.34.1.windows-1
 ```
 
 ### MacOS
@@ -63,7 +63,7 @@ To check the installation was successful open the "Terminal" app. In the window
 that launches enter the command `git --version` and press enter. You should see
 output similar to the below:
 ```
-git version 2.25.0
+git version 2.33.0
 ```
 
 ### Linux
