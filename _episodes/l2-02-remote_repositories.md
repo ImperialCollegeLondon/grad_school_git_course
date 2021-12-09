@@ -67,21 +67,21 @@ local one out of it or the other way around, the steps are different.
 >$ git remote add origin [address of your remote repo] 
 ># The address should start with https:// and end in .git 
 >$ git push -u origin main
-># You will be asked to provide your GitHub username and password.
-># Enter your personal access token (PAT) as your password. 
 >```
->- The first line will set the GitHub repository as the remote for your
-> local one, calling it `origin`.
->- The second line will push your main branch to a remote one called
->  `origin/main`, setting it as its upstream branch.
-> - You can check if things went well by going to GitHub: the repository there
->   should contain all the files of your local repository.
->
+> **Mac and Linux users:** You will be asked to provide your GitHub username and password.
+> Enter your personal access token (PAT) as your password.   
 > **Windows users:** You will be presented with a CredentialHelperSelector dialog box. 
 > Ensure "manager-core" is selected and check the box for "Always use this from now 
 > on". Press Select. From the next dialog select "Token" then paste the PAT you saved 
 > earlier and press "Sign in". On subsequent interactions with GitHub your credentials 
 > will be remembered and you will not be prompted. 
+>
+>- The first line above will set the GitHub repository as the remote for your
+> local one, calling it `origin`.
+>- The second line will push your main branch to a remote one called
+>  `origin/main`, setting it as its upstream branch.
+> - You can check if things went well by going to GitHub: the repository there
+>   should contain all the files of your local repository.
 {: .challenge}
 
 > ## Configuring a local repository from a remote
