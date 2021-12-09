@@ -141,8 +141,22 @@ The path you see in the output will vary depending on your operating system.
 > $ git branch -m master main
 > ~~~
 > {: .commands}
+> 
+> Depending on you exact version of git, you might get an error like the following when
+> trying to rename the branch:
 >
-> We will use `main` as the default branch name throught the workshop.
+> ~~~
+> error:: refname refs/heads/master not found
+> fatal: Branch rename failed  
+> ~~~
+> {: .output}
+>
+> If that is your case, make sure there are not uncommitted files in the repository, and
+> that you have made at least one commit (see below for more information about commits).
+> Ultimately, you can simply create a separate branch called `main` and use that one as
+> your default branch rather than `master`, which you can then delete. 
+>   
+> We will use `main` as the default branch name throught the workshop. 
 {: .callout}
 
 ## Creating The First Snapshot
