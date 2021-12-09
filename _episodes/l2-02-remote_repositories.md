@@ -76,6 +76,12 @@ local one out of it or the other way around, the steps are different.
 >  `origin/main`, setting it as its upstream branch.
 > - You can check if things went well by going to GitHub: the repository there
 >   should contain all the files of your local repository.
+>
+> **Windows users:** You will be presented with a CredentialHelperSelector dialog box. 
+> Ensure "manager-core" is selected and check the box for "Always use this from now 
+> on". Press Select. From the next dialog select "Token" then paste the PAT you saved 
+> earlier and press "Sign in". On subsequent interactions with GitHub your credentials 
+> will be remembered and you will not be prompted. 
 {: .challenge}
 
 > ## Configuring a local repository from a remote
