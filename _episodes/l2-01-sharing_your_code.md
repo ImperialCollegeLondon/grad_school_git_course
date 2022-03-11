@@ -241,7 +241,7 @@ See [GitHub Help: Setting guidelines for repository contributors][contributors].
 > To make this complete, let's add some contributing guidelines:
 >
 > - Go to **Insights** in the upper right corner of the repository.
-> - And then click on **Community** on the left hand side.
+> - And then click on **Community Standards** on the left hand side.
 > - The screen now shows how the project compares with the recommended
 >   community standards. Is not bad, but could be better.
 > - Click on **Add** in the *Contributing* line. In the new screen you can
