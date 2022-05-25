@@ -22,7 +22,7 @@ keypoints:
 - Git must be explicitly told which changes to include as part of commit (known as staging changes) with git add [file]...
 - Staged changes can be stored in a commit with git commit -m "commit message"
 - You can check which files have been changed and/or staged with git status
-- You can see the full changes made to files with git diff for unstaged files and git diff --cached
+- You can see the full changes made to files with git diff for unstaged files and git diff --staged
 - The commit history of a repository can be checked with git log
 - The command git revert commit_ref creates a new commit which undoes the changes of the specified commit
 - The command git reset --soft HEAD^ removes the previous commit from the history
@@ -310,7 +310,7 @@ different git areas and the commands seen so far"){:class="img-responsive"}
 >
 > Now, run `git status` and `git diff`. Then, **stage and commit** the changes
 > to `ingredients.md` but, after each step run `git status`, `git diff` and
-> `git diff --cached`. What is the difference between the two diff commands? How
+> `git diff --staged`. What is the difference between the two diff commands? How
 > does running staging and committing change the status of a file?
 >
 {: .challenge}
