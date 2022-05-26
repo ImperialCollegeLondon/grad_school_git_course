@@ -187,11 +187,16 @@ See [GitHub Help: Adding a license to a repository][adding-licence]
   want to support.
 - If you know your software will not work in, let's say, Windows, say so!!
 
-### CITATION.txt
+### CITATION.cff
 
 - Indicates how your software should be cited by anyone using it.
-- Often includes the citation in plan text and as a Bibtex entry.
-- Point to this file from the README, so people do not miss it.
+- A recently developed standard.
+- cff = [Citation File Format](cff).
+- Create and check via the provided [tools](cff-tools).
+- Supported by GitHub, Zenodo and Zotero.
+
+[cff]: https://citation-file-format.github.io/
+[cff-tools]: https://citation-file-format.github.io/#/tools-for-working-with-citationcff-files
 
 > ## Digital Object Identifiers (DOI)
 >
