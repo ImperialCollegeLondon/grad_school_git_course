@@ -77,6 +77,22 @@ to perform the above commands once for each new computer Git is installed on.
 
 ## Creating a Repository
 
+> ## Warning for Linux and MacOS users!
+>
+> Before you move onto this exercise, you should run the following command:
+>
+> ~~~
+> $ git config --global core.autocrlf input
+> ~~~
+>
+> This will stop git recording changes to line endings, which can -- depending on which
+> text editor you're using -- result in git erroneously thinking every line in a file
+> has changed.
+>
+> For a longer explanation of why this may be needed, see [GitHub's comprehensive
+> explanation here](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings).
+{: .callout}
+
 Now that Git is ready to use lets see how to start using it with a new
 project. In Git terminology a project is called a repository (frequently
 shortened to repo).
@@ -141,22 +157,22 @@ The path you see in the output will vary depending on your operating system.
 > $ git branch -m master main
 > ~~~
 > {: .commands}
-> 
+>
 > Depending on you exact version of git, you might get an error like the following when
 > trying to rename the branch:
 >
 > ~~~
 > error:: refname refs/heads/master not found
-> fatal: Branch rename failed  
+> fatal: Branch rename failed
 > ~~~
 > {: .output}
 >
 > If that is your case, make sure there are not uncommitted files in the repository, and
 > that you have made at least one commit (see below for more information about commits).
 > Ultimately, you can simply create a separate branch called `main` and use that one as
-> your default branch rather than `master`, which you can then delete. 
->   
-> We will use `main` as the default branch name throught the workshop. 
+> your default branch rather than `master`, which you can then delete.
+>
+> We will use `main` as the default branch name throught the workshop.
 {: .callout}
 
 ## Creating The First Snapshot
