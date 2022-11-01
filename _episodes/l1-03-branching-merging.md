@@ -104,8 +104,10 @@ them and how to merge changes from different branches.
 >
 > We will now define an *alias* in Git, to be able to nicely visualize branch
 > structure in the terminal without having to remember a long Git command
-> (more details about aliases are given
-> [in a later section]({{ site.baseurl }}/11-aliases)):
+> (more details about what aliases are can be found
+> [here](https://linuxize.com/post/how-to-create-bash-aliases/) and the full
+> docs on how to set them up in Git are
+> [here](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)):
 >
 > ```shell
 > $ git config --global alias.graph "log --all --graph --decorate --oneline"
@@ -249,7 +251,7 @@ $ git merge --no-edit experiment
 ~~~
 {: .commands}
 ~~~
-Merge made by the 'recursive' strategy.
+Merge made by the 'ort' strategy.
  ingredients.md | 1 +
  1 file changed, 1 insertion(+)
 ~~~
