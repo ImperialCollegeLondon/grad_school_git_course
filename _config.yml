@@ -11,7 +11,7 @@
 carpentry: "rcs"
 
 # Overall title for pages.
-title: "Using Git to Code, Collaborate and Share"
+title: "Introduction to using Git and GitHub for software development"
 
 # Life cycle stage of the lesson
 # possible values: "pre-alpha", "alpha", "beta", "stable"
