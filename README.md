@@ -1,4 +1,4 @@
-# Basic Git for version control and code sharing
+# Basic Git for version control and sharing code
 
 This repository contains materials taught as part of the Imperial College
 Graduate School Course of the above title.
