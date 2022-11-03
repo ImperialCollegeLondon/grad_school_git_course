@@ -1,4 +1,4 @@
-# Basic Git for version control and sharing code
+# Introduction to using Git and GitHub for software development
 
 This repository contains materials taught as part of the Imperial College
 Graduate School Course of the above title.
