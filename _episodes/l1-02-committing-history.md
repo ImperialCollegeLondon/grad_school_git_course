@@ -232,7 +232,7 @@ Now this change is ***staged*** and ready to be committed (note that we could
 have saved some typing here with the command `git add ingredients.md
 instructions.md`).
 
-Let us now commit the change to the repository, with a bried but informative
+Let us now commit the change to the repository, with a brief but informative
 description of the change:
 
 ~~~
