@@ -136,6 +136,7 @@ Initialized empty Git repository in /home/username/recipe/.git/
 The path you see in the output will vary depending on your operating system.
 
 > ## `master` and `main` branches
+> A branch is a specific version of the state and history of the work in the repo.
 > Traditionally, the default branch name whenever you `init` a repository was `master`.
 > However, the sensitivity of the online community has shifted lately and some tools,
 > like GitHub, use now `main` as the default name instead. You can read the rationale
@@ -172,7 +173,8 @@ The path you see in the output will vary depending on your operating system.
 > Ultimately, you can simply create a separate branch called `main` and use that one as
 > your default branch rather than `master`, which you can then delete.
 >
-> We will use `main` as the default branch name throught the workshop.
+> We will use `main` as the default branch name throught the workshop. Branches will be
+> covered in detail in Intermediate Git and GitHub for Effective Collaboration.
 {: .callout}
 
 ## Creating The First Snapshot
@@ -230,7 +232,8 @@ Now this change is ***staged*** and ready to be committed (note that we could
 have saved some typing here with the command `git add ingredients.md
 instructions.md`).
 
-Let us now commit the change to the repository:
+Let us now commit the change to the repository, with a bried but informative
+description of the change:
 
 ~~~
 $ git commit -m "adding ingredients and instructions"
