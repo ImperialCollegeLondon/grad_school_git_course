@@ -52,7 +52,7 @@ There are several widely used repository hosting services using Git, such as
 
 Set up your free github account:
 
-1. Go to [www.github.com/join](https:www.github.com/join).
+1. Go to [www.github.com/join](https://www.github.com/join).
 2. Enter your details and click "Create an account". You can use your Imperial e-mail address,
    but this is not mandatory.
 3. Choose the Free plan.
@@ -191,8 +191,8 @@ See [GitHub Help: Adding a license to a repository][adding-licence]
 
 - Indicates how your software should be cited by anyone using it.
 - A recently developed standard.
-- cff = [Citation File Format](cff).
-- Create and check via the provided [tools](cff-tools).
+- cff = [Citation File Format][cff].
+- Create and check via the provided [tools][cff-tools].
 - Supported by GitHub, Zenodo and Zotero.
 
 [cff]: https://citation-file-format.github.io/
