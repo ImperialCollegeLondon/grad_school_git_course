@@ -23,4 +23,15 @@ Refinery lesson](https://coderefinery.github.io/git-intro/).
 > Any introductory (graduate school) level programming course
 {: .prereq}
 
+## Video Recordings
+
+If you are a member of Imperial College a recording of delivery of the course can be
+viewed at the below links:
+
+- [Course Video: Part 1]
+- [Course Video: Part 2]
+
+[Course Video: Part 1]: https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=04f7dd6e-b415-47d9-ba65-aea10093872e
+[Course Video: Part 2]: https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=59ac6157-c142-4978-98ae-aea200920480
+
 {% include links.md %}
