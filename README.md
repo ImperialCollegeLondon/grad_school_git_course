@@ -1,5 +1,14 @@
 # Using Git to Code, Collaborate and Share
 
+> ⚠️ **Warning**
+>
+> This course has been split into two courses and is now archived.
+>
+> The current courses are:
+> - **[Introduction to using Git and GitHub for software development](https://github.com/ImperialCollegeLondon/introductory_grad_school_git_course)**
+> - **[Intermediate Git and GitHub for Effective Collaboration](https://github.com/ImperialCollegeLondon/intermediate_grad_school_git_course)**.
+
+
 This repository contains materials taught as part of the Imperial College
 Graduate School Course of the above title.
 
